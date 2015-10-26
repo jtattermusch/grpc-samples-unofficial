@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Protobuf {
+namespace Google.Protobuf.WellKnownTypes {
 
   namespace Proto {
 
@@ -24,12 +24,13 @@ namespace Google.Protobuf {
         byte[] descriptorData = global::System.Convert.FromBase64String(
             string.Concat(
               "Chtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8SD2dvb2dsZS5wcm90b2J1", 
-              "ZiIHCgVFbXB0eUIpChNjb20uZ29vZ2xlLnByb3RvYnVmQgpFbXB0eVByb3Rv", 
-              "UAGiAgNHUEJiBnByb3RvMw=="));
+              "ZiIHCgVFbXB0eUJNChNjb20uZ29vZ2xlLnByb3RvYnVmQgpFbXB0eVByb3Rv", 
+              "UAGgAQGiAgNHUEKqAh5Hb29nbGUuUHJvdG9idWYuV2VsbEtub3duVHlwZXNi", 
+              "BnByb3RvMw=="));
         descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
             new pbr::FileDescriptor[] { },
             new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Protobuf.Empty), null, null, null, null)
+              new pbr::GeneratedCodeInfo(typeof(global::Google.Protobuf.WellKnownTypes.Empty), null, null, null, null)
             }));
       }
       #endregion
@@ -43,7 +44,7 @@ namespace Google.Protobuf {
     public static pb::MessageParser<Empty> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Protobuf.Proto.Empty.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Protobuf.WellKnownTypes.Proto.Empty.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {

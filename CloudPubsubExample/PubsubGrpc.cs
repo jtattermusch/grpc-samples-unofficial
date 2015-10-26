@@ -17,7 +17,7 @@ namespace Google.Pubsub.V1 {
     static readonly Marshaller<global::Google.Pubsub.V1.ListSubscriptionsRequest> __Marshaller_ListSubscriptionsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.ListSubscriptionsRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.ListSubscriptionsResponse> __Marshaller_ListSubscriptionsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.ListSubscriptionsResponse.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.DeleteSubscriptionRequest> __Marshaller_DeleteSubscriptionRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.DeleteSubscriptionRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.Empty.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.ModifyAckDeadlineRequest> __Marshaller_ModifyAckDeadlineRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.ModifyAckDeadlineRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.AcknowledgeRequest> __Marshaller_AcknowledgeRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.AcknowledgeRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.PullRequest> __Marshaller_PullRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.PullRequest.Parser.ParseFrom);
@@ -45,21 +45,21 @@ namespace Google.Pubsub.V1 {
         __Marshaller_ListSubscriptionsRequest,
         __Marshaller_ListSubscriptionsResponse);
 
-    static readonly Method<global::Google.Pubsub.V1.DeleteSubscriptionRequest, global::Google.Protobuf.Empty> __Method_DeleteSubscription = new Method<global::Google.Pubsub.V1.DeleteSubscriptionRequest, global::Google.Protobuf.Empty>(
+    static readonly Method<global::Google.Pubsub.V1.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSubscription = new Method<global::Google.Pubsub.V1.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "DeleteSubscription",
         __Marshaller_DeleteSubscriptionRequest,
         __Marshaller_Empty);
 
-    static readonly Method<global::Google.Pubsub.V1.ModifyAckDeadlineRequest, global::Google.Protobuf.Empty> __Method_ModifyAckDeadline = new Method<global::Google.Pubsub.V1.ModifyAckDeadlineRequest, global::Google.Protobuf.Empty>(
+    static readonly Method<global::Google.Pubsub.V1.ModifyAckDeadlineRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ModifyAckDeadline = new Method<global::Google.Pubsub.V1.ModifyAckDeadlineRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "ModifyAckDeadline",
         __Marshaller_ModifyAckDeadlineRequest,
         __Marshaller_Empty);
 
-    static readonly Method<global::Google.Pubsub.V1.AcknowledgeRequest, global::Google.Protobuf.Empty> __Method_Acknowledge = new Method<global::Google.Pubsub.V1.AcknowledgeRequest, global::Google.Protobuf.Empty>(
+    static readonly Method<global::Google.Pubsub.V1.AcknowledgeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Acknowledge = new Method<global::Google.Pubsub.V1.AcknowledgeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "Acknowledge",
@@ -73,7 +73,7 @@ namespace Google.Pubsub.V1 {
         __Marshaller_PullRequest,
         __Marshaller_PullResponse);
 
-    static readonly Method<global::Google.Pubsub.V1.ModifyPushConfigRequest, global::Google.Protobuf.Empty> __Method_ModifyPushConfig = new Method<global::Google.Pubsub.V1.ModifyPushConfigRequest, global::Google.Protobuf.Empty>(
+    static readonly Method<global::Google.Pubsub.V1.ModifyPushConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ModifyPushConfig = new Method<global::Google.Pubsub.V1.ModifyPushConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "ModifyPushConfig",
@@ -101,26 +101,26 @@ namespace Google.Pubsub.V1 {
       global::Google.Pubsub.V1.ListSubscriptionsResponse ListSubscriptions(global::Google.Pubsub.V1.ListSubscriptionsRequest request, CallOptions options);
       AsyncUnaryCall<global::Google.Pubsub.V1.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.Pubsub.V1.ListSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
       AsyncUnaryCall<global::Google.Pubsub.V1.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.Pubsub.V1.ListSubscriptionsRequest request, CallOptions options);
-      global::Google.Protobuf.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      global::Google.Protobuf.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options);
-      AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options);
-      global::Google.Protobuf.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      global::Google.Protobuf.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options);
-      AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options);
-      global::Google.Protobuf.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      global::Google.Protobuf.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options);
-      AsyncUnaryCall<global::Google.Protobuf.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      AsyncUnaryCall<global::Google.Protobuf.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options);
+      global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options);
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options);
+      global::Google.Protobuf.WellKnownTypes.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      global::Google.Protobuf.WellKnownTypes.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options);
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options);
+      global::Google.Protobuf.WellKnownTypes.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      global::Google.Protobuf.WellKnownTypes.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options);
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options);
       global::Google.Pubsub.V1.PullResponse Pull(global::Google.Pubsub.V1.PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
       global::Google.Pubsub.V1.PullResponse Pull(global::Google.Pubsub.V1.PullRequest request, CallOptions options);
       AsyncUnaryCall<global::Google.Pubsub.V1.PullResponse> PullAsync(global::Google.Pubsub.V1.PullRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
       AsyncUnaryCall<global::Google.Pubsub.V1.PullResponse> PullAsync(global::Google.Pubsub.V1.PullRequest request, CallOptions options);
-      global::Google.Protobuf.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      global::Google.Protobuf.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options);
-      AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options);
+      global::Google.Protobuf.WellKnownTypes.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      global::Google.Protobuf.WellKnownTypes.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options);
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options);
     }
 
     // server-side interface
@@ -129,11 +129,11 @@ namespace Google.Pubsub.V1 {
       Task<global::Google.Pubsub.V1.Subscription> CreateSubscription(global::Google.Pubsub.V1.Subscription request, ServerCallContext context);
       Task<global::Google.Pubsub.V1.Subscription> GetSubscription(global::Google.Pubsub.V1.GetSubscriptionRequest request, ServerCallContext context);
       Task<global::Google.Pubsub.V1.ListSubscriptionsResponse> ListSubscriptions(global::Google.Pubsub.V1.ListSubscriptionsRequest request, ServerCallContext context);
-      Task<global::Google.Protobuf.Empty> DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, ServerCallContext context);
-      Task<global::Google.Protobuf.Empty> ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, ServerCallContext context);
-      Task<global::Google.Protobuf.Empty> Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, ServerCallContext context);
+      Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, ServerCallContext context);
+      Task<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, ServerCallContext context);
+      Task<global::Google.Protobuf.WellKnownTypes.Empty> Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, ServerCallContext context);
       Task<global::Google.Pubsub.V1.PullResponse> Pull(global::Google.Pubsub.V1.PullRequest request, ServerCallContext context);
-      Task<global::Google.Protobuf.Empty> ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, ServerCallContext context);
+      Task<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, ServerCallContext context);
     }
 
     // client stub
@@ -202,62 +202,62 @@ namespace Google.Pubsub.V1 {
         var call = CreateCall(__Method_ListSubscriptions, options);
         return Calls.AsyncUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_DeleteSubscription, new CallOptions(headers, deadline, cancellationToken));
         return Calls.BlockingUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options)
+      public global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_DeleteSubscription, options);
         return Calls.BlockingUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_DeleteSubscription, new CallOptions(headers, deadline, cancellationToken));
         return Calls.AsyncUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options)
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Pubsub.V1.DeleteSubscriptionRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_DeleteSubscription, options);
         return Calls.AsyncUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public global::Google.Protobuf.WellKnownTypes.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_ModifyAckDeadline, new CallOptions(headers, deadline, cancellationToken));
         return Calls.BlockingUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options)
+      public global::Google.Protobuf.WellKnownTypes.Empty ModifyAckDeadline(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_ModifyAckDeadline, options);
         return Calls.BlockingUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_ModifyAckDeadline, new CallOptions(headers, deadline, cancellationToken));
         return Calls.AsyncUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options)
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyAckDeadlineAsync(global::Google.Pubsub.V1.ModifyAckDeadlineRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_ModifyAckDeadline, options);
         return Calls.AsyncUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public global::Google.Protobuf.WellKnownTypes.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_Acknowledge, new CallOptions(headers, deadline, cancellationToken));
         return Calls.BlockingUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options)
+      public global::Google.Protobuf.WellKnownTypes.Empty Acknowledge(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_Acknowledge, options);
         return Calls.BlockingUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_Acknowledge, new CallOptions(headers, deadline, cancellationToken));
         return Calls.AsyncUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options)
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AcknowledgeAsync(global::Google.Pubsub.V1.AcknowledgeRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_Acknowledge, options);
         return Calls.AsyncUnaryCall(call, request);
@@ -282,22 +282,22 @@ namespace Google.Pubsub.V1 {
         var call = CreateCall(__Method_Pull, options);
         return Calls.AsyncUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public global::Google.Protobuf.WellKnownTypes.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_ModifyPushConfig, new CallOptions(headers, deadline, cancellationToken));
         return Calls.BlockingUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options)
+      public global::Google.Protobuf.WellKnownTypes.Empty ModifyPushConfig(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_ModifyPushConfig, options);
         return Calls.BlockingUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_ModifyPushConfig, new CallOptions(headers, deadline, cancellationToken));
         return Calls.AsyncUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options)
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ModifyPushConfigAsync(global::Google.Pubsub.V1.ModifyPushConfigRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_ModifyPushConfig, options);
         return Calls.AsyncUnaryCall(call, request);
@@ -338,7 +338,7 @@ namespace Google.Pubsub.V1 {
     static readonly Marshaller<global::Google.Pubsub.V1.ListTopicSubscriptionsRequest> __Marshaller_ListTopicSubscriptionsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.ListTopicSubscriptionsRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> __Marshaller_ListTopicSubscriptionsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.ListTopicSubscriptionsResponse.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Pubsub.V1.DeleteTopicRequest> __Marshaller_DeleteTopicRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Pubsub.V1.DeleteTopicRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.Empty.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
     static readonly Method<global::Google.Pubsub.V1.Topic, global::Google.Pubsub.V1.Topic> __Method_CreateTopic = new Method<global::Google.Pubsub.V1.Topic, global::Google.Pubsub.V1.Topic>(
         MethodType.Unary,
@@ -375,7 +375,7 @@ namespace Google.Pubsub.V1 {
         __Marshaller_ListTopicSubscriptionsRequest,
         __Marshaller_ListTopicSubscriptionsResponse);
 
-    static readonly Method<global::Google.Pubsub.V1.DeleteTopicRequest, global::Google.Protobuf.Empty> __Method_DeleteTopic = new Method<global::Google.Pubsub.V1.DeleteTopicRequest, global::Google.Protobuf.Empty>(
+    static readonly Method<global::Google.Pubsub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTopic = new Method<global::Google.Pubsub.V1.DeleteTopicRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "DeleteTopic",
@@ -411,10 +411,10 @@ namespace Google.Pubsub.V1 {
       global::Google.Pubsub.V1.ListTopicSubscriptionsResponse ListTopicSubscriptions(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, CallOptions options);
       AsyncUnaryCall<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
       AsyncUnaryCall<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptionsAsync(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, CallOptions options);
-      global::Google.Protobuf.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      global::Google.Protobuf.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options);
-      AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
-      AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options);
+      global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options);
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken));
+      AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options);
     }
 
     // server-side interface
@@ -425,7 +425,7 @@ namespace Google.Pubsub.V1 {
       Task<global::Google.Pubsub.V1.Topic> GetTopic(global::Google.Pubsub.V1.GetTopicRequest request, ServerCallContext context);
       Task<global::Google.Pubsub.V1.ListTopicsResponse> ListTopics(global::Google.Pubsub.V1.ListTopicsRequest request, ServerCallContext context);
       Task<global::Google.Pubsub.V1.ListTopicSubscriptionsResponse> ListTopicSubscriptions(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest request, ServerCallContext context);
-      Task<global::Google.Protobuf.Empty> DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, ServerCallContext context);
+      Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, ServerCallContext context);
     }
 
     // client stub
@@ -534,22 +534,22 @@ namespace Google.Pubsub.V1 {
         var call = CreateCall(__Method_ListTopicSubscriptions, options);
         return Calls.AsyncUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_DeleteTopic, new CallOptions(headers, deadline, cancellationToken));
         return Calls.BlockingUnaryCall(call, request);
       }
-      public global::Google.Protobuf.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options)
+      public global::Google.Protobuf.WellKnownTypes.Empty DeleteTopic(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_DeleteTopic, options);
         return Calls.BlockingUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         var call = CreateCall(__Method_DeleteTopic, new CallOptions(headers, deadline, cancellationToken));
         return Calls.AsyncUnaryCall(call, request);
       }
-      public AsyncUnaryCall<global::Google.Protobuf.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options)
+      public AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTopicAsync(global::Google.Pubsub.V1.DeleteTopicRequest request, CallOptions options)
       {
         var call = CreateCall(__Method_DeleteTopic, options);
         return Calls.AsyncUnaryCall(call, request);

@@ -111,7 +111,7 @@ namespace Google.Pubsub.V1 {
             "Y3RzLyovdG9waWNzLyp9QiUKFGNvbS5nb29nbGUucHVic3ViLnYxQgtQdWJz", 
             "dWJQcm90b1ABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.Annotations.Descriptor, global::Google.Protobuf.Proto.Empty.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.Annotations.Descriptor, global::Google.Protobuf.WellKnownTypes.Proto.Empty.Descriptor, },
           new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
             new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Topic), new[]{ "Name" }, null, null, null),
             new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PubsubMessage), new[]{ "Data", "Attributes", "MessageId" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
