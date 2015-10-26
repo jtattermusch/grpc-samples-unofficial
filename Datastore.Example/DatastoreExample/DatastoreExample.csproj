@@ -91,8 +91,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Annotations.cs" />
+    <Compile Include="Datastore.cs" />
+    <Compile Include="DatastoreGrpc.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Http.cs" />
+    <Compile Include="Latlng.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
+    <Compile Include="Struct.cs" />
+    <Compile Include="Timestamp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
