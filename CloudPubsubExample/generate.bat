@@ -1,0 +1,1 @@
+protoc -I . google\pubsub\v1\pubsub.proto google\protobuf\empty.proto google\api\annotations.proto google\api\http.proto --csharp_out=. --grpc_out=. --plugin=protoc-gen-grpc=..\packages\Grpc.Tools.0.7.0-preview20150826\tools\grpc_csharp_plugin.exe
