@@ -83,7 +83,7 @@ namespace Google.Pubsub.V1 {
     // service descriptor
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.Services[0]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.Services[0]; }
     }
 
     // client interface
@@ -385,7 +385,7 @@ namespace Google.Pubsub.V1 {
     // service descriptor
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.Services[1]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.Services[1]; }
     }
 
     // client interface

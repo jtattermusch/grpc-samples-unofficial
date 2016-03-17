@@ -9,145 +9,150 @@ using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Pubsub.V1 {
 
+  /// <summary>Holder for reflection information generated from google/pubsub/v1/pubsub.proto</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public static partial class Pubsub {
+  public static partial class PubsubReflection {
 
     #region Descriptor
+    /// <summary>File descriptor for google/pubsub/v1/pubsub.proto</summary>
     public static pbr::FileDescriptor Descriptor {
       get { return descriptor; }
     }
     private static pbr::FileDescriptor descriptor;
 
-    static Pubsub() {
+    static PubsubReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1nb29nbGUvcHVic3ViL3YxL3B1YnN1Yi5wcm90bxIQZ29vZ2xlLnB1YnN1", 
-            "Yi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3By", 
-            "b3RvYnVmL2VtcHR5LnByb3RvIhUKBVRvcGljEgwKBG5hbWUYASABKAkiqQEK", 
-            "DVB1YnN1Yk1lc3NhZ2USDAoEZGF0YRgBIAEoDBJDCgphdHRyaWJ1dGVzGAIg", 
-            "AygLMi8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdlLkF0dHJpYnV0", 
-            "ZXNFbnRyeRISCgptZXNzYWdlX2lkGAMgASgJGjEKD0F0dHJpYnV0ZXNFbnRy", 
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIiAKD0dldFRvcGlj", 
-            "UmVxdWVzdBINCgV0b3BpYxgBIAEoCSJSCg5QdWJsaXNoUmVxdWVzdBINCgV0", 
-            "b3BpYxgBIAEoCRIxCghtZXNzYWdlcxgCIAMoCzIfLmdvb2dsZS5wdWJzdWIu", 
-            "djEuUHVic3ViTWVzc2FnZSImCg9QdWJsaXNoUmVzcG9uc2USEwoLbWVzc2Fn", 
-            "ZV9pZHMYASADKAkiSwoRTGlzdFRvcGljc1JlcXVlc3QSDwoHcHJvamVjdBgB", 
-            "IAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJW", 
-            "ChJMaXN0VG9waWNzUmVzcG9uc2USJwoGdG9waWNzGAEgAygLMhcuZ29vZ2xl", 
-            "LnB1YnN1Yi52MS5Ub3BpYxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiVQod", 
-            "TGlzdFRvcGljU3Vic2NyaXB0aW9uc1JlcXVlc3QSDQoFdG9waWMYASABKAkS", 
-            "EQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiUAoeTGlz", 
-            "dFRvcGljU3Vic2NyaXB0aW9uc1Jlc3BvbnNlEhUKDXN1YnNjcmlwdGlvbnMY", 
-            "ASADKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiMKEkRlbGV0ZVRvcGlj", 
-            "UmVxdWVzdBINCgV0b3BpYxgBIAEoCSJ8CgxTdWJzY3JpcHRpb24SDAoEbmFt", 
-            "ZRgBIAEoCRINCgV0b3BpYxgCIAEoCRIxCgtwdXNoX2NvbmZpZxgEIAEoCzIc", 
-            "Lmdvb2dsZS5wdWJzdWIudjEuUHVzaENvbmZpZxIcChRhY2tfZGVhZGxpbmVf", 
-            "c2Vjb25kcxgFIAEoBSKYAQoKUHVzaENvbmZpZxIVCg1wdXNoX2VuZHBvaW50", 
-            "GAEgASgJEkAKCmF0dHJpYnV0ZXMYAiADKAsyLC5nb29nbGUucHVic3ViLnYx", 
-            "LlB1c2hDb25maWcuQXR0cmlidXRlc0VudHJ5GjEKD0F0dHJpYnV0ZXNFbnRy", 
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlMKD1JlY2VpdmVk", 
-            "TWVzc2FnZRIOCgZhY2tfaWQYASABKAkSMAoHbWVzc2FnZRgCIAEoCzIfLmdv", 
-            "b2dsZS5wdWJzdWIudjEuUHVic3ViTWVzc2FnZSIuChZHZXRTdWJzY3JpcHRp", 
-            "b25SZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCSJSChhMaXN0U3Vic2Ny", 
-            "aXB0aW9uc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUY", 
-            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJrChlMaXN0U3Vic2NyaXB0aW9u", 
-            "c1Jlc3BvbnNlEjUKDXN1YnNjcmlwdGlvbnMYASADKAsyHi5nb29nbGUucHVi", 
-            "c3ViLnYxLlN1YnNjcmlwdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki", 
-            "MQoZRGVsZXRlU3Vic2NyaXB0aW9uUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24Y", 
-            "ASABKAkiYgoXTW9kaWZ5UHVzaENvbmZpZ1JlcXVlc3QSFAoMc3Vic2NyaXB0", 
-            "aW9uGAEgASgJEjEKC3B1c2hfY29uZmlnGAIgASgLMhwuZ29vZ2xlLnB1YnN1", 
-            "Yi52MS5QdXNoQ29uZmlnIlUKC1B1bGxSZXF1ZXN0EhQKDHN1YnNjcmlwdGlv", 
-            "bhgBIAEoCRIaChJyZXR1cm5faW1tZWRpYXRlbHkYAiABKAgSFAoMbWF4X21l", 
-            "c3NhZ2VzGAMgASgFIkwKDFB1bGxSZXNwb25zZRI8ChFyZWNlaXZlZF9tZXNz", 
-            "YWdlcxgBIAMoCzIhLmdvb2dsZS5wdWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdl", 
-            "Il8KGE1vZGlmeUFja0RlYWRsaW5lUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24Y", 
-            "ASABKAkSDwoHYWNrX2lkcxgEIAMoCRIcChRhY2tfZGVhZGxpbmVfc2Vjb25k", 
-            "cxgDIAEoBSI7ChJBY2tub3dsZWRnZVJlcXVlc3QSFAoMc3Vic2NyaXB0aW9u", 
-            "GAEgASgJEg8KB2Fja19pZHMYAiADKAkywAkKClN1YnNjcmliZXIShgEKEkNy", 
-            "ZWF0ZVN1YnNjcmlwdGlvbhIeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0", 
-            "aW9uGh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24iMILT5JMCKhol", 
-            "L3YxL3tuYW1lPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfToBKhKSAQoP", 
-            "R2V0U3Vic2NyaXB0aW9uEiguZ29vZ2xlLnB1YnN1Yi52MS5HZXRTdWJzY3Jp", 
-            "cHRpb25SZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24i", 
-            "NYLT5JMCLxItL3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3Jp", 
-            "cHRpb25zLyp9EpwBChFMaXN0U3Vic2NyaXB0aW9ucxIqLmdvb2dsZS5wdWJz", 
-            "dWIudjEuTGlzdFN1YnNjcmlwdGlvbnNSZXF1ZXN0GisuZ29vZ2xlLnB1YnN1", 
-            "Yi52MS5MaXN0U3Vic2NyaXB0aW9uc1Jlc3BvbnNlIi6C0+STAigSJi92MS97", 
-            "cHJvamVjdD1wcm9qZWN0cy8qfS9zdWJzY3JpcHRpb25zEpABChJEZWxldGVT", 
-            "dWJzY3JpcHRpb24SKy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVN1YnNjcmlw", 
-            "dGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT5JMCLyot", 
-            "L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9", 
-            "EqMBChFNb2RpZnlBY2tEZWFkbGluZRIqLmdvb2dsZS5wdWJzdWIudjEuTW9k", 
-            "aWZ5QWNrRGVhZGxpbmVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5", 
-            "IkqC0+STAkQiPy92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2Ny", 
-            "aXB0aW9ucy8qfTptb2RpZnlBY2tEZWFkbGluZToBKhKRAQoLQWNrbm93bGVk", 
-            "Z2USJC5nb29nbGUucHVic3ViLnYxLkFja25vd2xlZGdlUmVxdWVzdBoWLmdv", 
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwI+IjkvdjEve3N1YnNjcmlwdGlv", 
-            "bj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06YWNrbm93bGVkZ2U6ASoS", 
-            "hAEKBFB1bGwSHS5nb29nbGUucHVic3ViLnYxLlB1bGxSZXF1ZXN0Gh4uZ29v", 
-            "Z2xlLnB1YnN1Yi52MS5QdWxsUmVzcG9uc2UiPYLT5JMCNyIyL3YxL3tzdWJz", 
-            "Y3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OnB1bGw6ASoS", 
-            "oAEKEE1vZGlmeVB1c2hDb25maWcSKS5nb29nbGUucHVic3ViLnYxLk1vZGlm", 
-            "eVB1c2hDb25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkmC", 
-            "0+STAkMiPi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0", 
-            "aW9ucy8qfTptb2RpZnlQdXNoQ29uZmlnOgEqMpsGCglQdWJsaXNoZXISagoL", 
-            "Q3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRvcGljGhcuZ29vZ2xl", 
-            "LnB1YnN1Yi52MS5Ub3BpYyIpgtPkkwIjGh4vdjEve25hbWU9cHJvamVjdHMv", 
-            "Ki90b3BpY3MvKn06ASoSggEKB1B1Ymxpc2gSIC5nb29nbGUucHVic3ViLnYx", 
-            "LlB1Ymxpc2hSZXF1ZXN0GiEuZ29vZ2xlLnB1YnN1Yi52MS5QdWJsaXNoUmVz", 
-            "cG9uc2UiMoLT5JMCLCInL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGljcy8q", 
-            "fTpwdWJsaXNoOgEqEm8KCEdldFRvcGljEiEuZ29vZ2xlLnB1YnN1Yi52MS5H", 
-            "ZXRUb3BpY1JlcXVlc3QaFy5nb29nbGUucHVic3ViLnYxLlRvcGljIieC0+ST", 
-            "AiESHy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn0SgAEKCkxpc3RU", 
-            "b3BpY3MSIy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY3NSZXF1ZXN0GiQu", 
-            "Z29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVzcG9uc2UiJ4LT5JMCIRIf", 
-            "L3YxL3twcm9qZWN0PXByb2plY3RzLyp9L3RvcGljcxKyAQoWTGlzdFRvcGlj", 
-            "U3Vic2NyaXB0aW9ucxIvLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU3Vi", 
-            "c2NyaXB0aW9uc1JlcXVlc3QaMC5nb29nbGUucHVic3ViLnYxLkxpc3RUb3Bp", 
-            "Y1N1YnNjcmlwdGlvbnNSZXNwb25zZSI1gtPkkwIvEi0vdjEve3RvcGljPXBy", 
-            "b2plY3RzLyovdG9waWNzLyp9L3N1YnNjcmlwdGlvbnMSdAoLRGVsZXRlVG9w", 
-            "aWMSJC5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVRvcGljUmVxdWVzdBoWLmdv", 
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSIngtPkkwIhKh8vdjEve3RvcGljPXByb2pl", 
-            "Y3RzLyovdG9waWNzLyp9QiUKFGNvbS5nb29nbGUucHVic3ViLnYxQgtQdWJz", 
+            "Ch1nb29nbGUvcHVic3ViL3YxL3B1YnN1Yi5wcm90bxIQZ29vZ2xlLnB1YnN1",
+            "Yi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3By",
+            "b3RvYnVmL2VtcHR5LnByb3RvIhUKBVRvcGljEgwKBG5hbWUYASABKAkiqQEK",
+            "DVB1YnN1Yk1lc3NhZ2USDAoEZGF0YRgBIAEoDBJDCgphdHRyaWJ1dGVzGAIg",
+            "AygLMi8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdlLkF0dHJpYnV0",
+            "ZXNFbnRyeRISCgptZXNzYWdlX2lkGAMgASgJGjEKD0F0dHJpYnV0ZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIiAKD0dldFRvcGlj",
+            "UmVxdWVzdBINCgV0b3BpYxgBIAEoCSJSCg5QdWJsaXNoUmVxdWVzdBINCgV0",
+            "b3BpYxgBIAEoCRIxCghtZXNzYWdlcxgCIAMoCzIfLmdvb2dsZS5wdWJzdWIu",
+            "djEuUHVic3ViTWVzc2FnZSImCg9QdWJsaXNoUmVzcG9uc2USEwoLbWVzc2Fn",
+            "ZV9pZHMYASADKAkiSwoRTGlzdFRvcGljc1JlcXVlc3QSDwoHcHJvamVjdBgB",
+            "IAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJW",
+            "ChJMaXN0VG9waWNzUmVzcG9uc2USJwoGdG9waWNzGAEgAygLMhcuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5Ub3BpYxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiVQod",
+            "TGlzdFRvcGljU3Vic2NyaXB0aW9uc1JlcXVlc3QSDQoFdG9waWMYASABKAkS",
+            "EQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkiUAoeTGlz",
+            "dFRvcGljU3Vic2NyaXB0aW9uc1Jlc3BvbnNlEhUKDXN1YnNjcmlwdGlvbnMY",
+            "ASADKAkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIiMKEkRlbGV0ZVRvcGlj",
+            "UmVxdWVzdBINCgV0b3BpYxgBIAEoCSJ8CgxTdWJzY3JpcHRpb24SDAoEbmFt",
+            "ZRgBIAEoCRINCgV0b3BpYxgCIAEoCRIxCgtwdXNoX2NvbmZpZxgEIAEoCzIc",
+            "Lmdvb2dsZS5wdWJzdWIudjEuUHVzaENvbmZpZxIcChRhY2tfZGVhZGxpbmVf",
+            "c2Vjb25kcxgFIAEoBSKYAQoKUHVzaENvbmZpZxIVCg1wdXNoX2VuZHBvaW50",
+            "GAEgASgJEkAKCmF0dHJpYnV0ZXMYAiADKAsyLC5nb29nbGUucHVic3ViLnYx",
+            "LlB1c2hDb25maWcuQXR0cmlidXRlc0VudHJ5GjEKD0F0dHJpYnV0ZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlMKD1JlY2VpdmVk",
+            "TWVzc2FnZRIOCgZhY2tfaWQYASABKAkSMAoHbWVzc2FnZRgCIAEoCzIfLmdv",
+            "b2dsZS5wdWJzdWIudjEuUHVic3ViTWVzc2FnZSIuChZHZXRTdWJzY3JpcHRp",
+            "b25SZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCSJSChhMaXN0U3Vic2Ny",
+            "aXB0aW9uc1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglwYWdlX3NpemUY",
+            "AiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJrChlMaXN0U3Vic2NyaXB0aW9u",
+            "c1Jlc3BvbnNlEjUKDXN1YnNjcmlwdGlvbnMYASADKAsyHi5nb29nbGUucHVi",
+            "c3ViLnYxLlN1YnNjcmlwdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "MQoZRGVsZXRlU3Vic2NyaXB0aW9uUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24Y",
+            "ASABKAkiYgoXTW9kaWZ5UHVzaENvbmZpZ1JlcXVlc3QSFAoMc3Vic2NyaXB0",
+            "aW9uGAEgASgJEjEKC3B1c2hfY29uZmlnGAIgASgLMhwuZ29vZ2xlLnB1YnN1",
+            "Yi52MS5QdXNoQ29uZmlnIlUKC1B1bGxSZXF1ZXN0EhQKDHN1YnNjcmlwdGlv",
+            "bhgBIAEoCRIaChJyZXR1cm5faW1tZWRpYXRlbHkYAiABKAgSFAoMbWF4X21l",
+            "c3NhZ2VzGAMgASgFIkwKDFB1bGxSZXNwb25zZRI8ChFyZWNlaXZlZF9tZXNz",
+            "YWdlcxgBIAMoCzIhLmdvb2dsZS5wdWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdl",
+            "Il8KGE1vZGlmeUFja0RlYWRsaW5lUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24Y",
+            "ASABKAkSDwoHYWNrX2lkcxgEIAMoCRIcChRhY2tfZGVhZGxpbmVfc2Vjb25k",
+            "cxgDIAEoBSI7ChJBY2tub3dsZWRnZVJlcXVlc3QSFAoMc3Vic2NyaXB0aW9u",
+            "GAEgASgJEg8KB2Fja19pZHMYAiADKAkywAkKClN1YnNjcmliZXIShgEKEkNy",
+            "ZWF0ZVN1YnNjcmlwdGlvbhIeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0",
+            "aW9uGh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24iMILT5JMCKhol",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfToBKhKSAQoP",
+            "R2V0U3Vic2NyaXB0aW9uEiguZ29vZ2xlLnB1YnN1Yi52MS5HZXRTdWJzY3Jp",
+            "cHRpb25SZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24i",
+            "NYLT5JMCLxItL3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3Jp",
+            "cHRpb25zLyp9EpwBChFMaXN0U3Vic2NyaXB0aW9ucxIqLmdvb2dsZS5wdWJz",
+            "dWIudjEuTGlzdFN1YnNjcmlwdGlvbnNSZXF1ZXN0GisuZ29vZ2xlLnB1YnN1",
+            "Yi52MS5MaXN0U3Vic2NyaXB0aW9uc1Jlc3BvbnNlIi6C0+STAigSJi92MS97",
+            "cHJvamVjdD1wcm9qZWN0cy8qfS9zdWJzY3JpcHRpb25zEpABChJEZWxldGVT",
+            "dWJzY3JpcHRpb24SKy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVN1YnNjcmlw",
+            "dGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT5JMCLyot",
+            "L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9",
+            "EqMBChFNb2RpZnlBY2tEZWFkbGluZRIqLmdvb2dsZS5wdWJzdWIudjEuTW9k",
+            "aWZ5QWNrRGVhZGxpbmVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IkqC0+STAkQiPy92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2Ny",
+            "aXB0aW9ucy8qfTptb2RpZnlBY2tEZWFkbGluZToBKhKRAQoLQWNrbm93bGVk",
+            "Z2USJC5nb29nbGUucHVic3ViLnYxLkFja25vd2xlZGdlUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSJEgtPkkwI+IjkvdjEve3N1YnNjcmlwdGlv",
+            "bj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06YWNrbm93bGVkZ2U6ASoS",
+            "hAEKBFB1bGwSHS5nb29nbGUucHVic3ViLnYxLlB1bGxSZXF1ZXN0Gh4uZ29v",
+            "Z2xlLnB1YnN1Yi52MS5QdWxsUmVzcG9uc2UiPYLT5JMCNyIyL3YxL3tzdWJz",
+            "Y3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OnB1bGw6ASoS",
+            "oAEKEE1vZGlmeVB1c2hDb25maWcSKS5nb29nbGUucHVic3ViLnYxLk1vZGlm",
+            "eVB1c2hDb25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkmC",
+            "0+STAkMiPi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0",
+            "aW9ucy8qfTptb2RpZnlQdXNoQ29uZmlnOgEqMpsGCglQdWJsaXNoZXISagoL",
+            "Q3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRvcGljGhcuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5Ub3BpYyIpgtPkkwIjGh4vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki90b3BpY3MvKn06ASoSggEKB1B1Ymxpc2gSIC5nb29nbGUucHVic3ViLnYx",
+            "LlB1Ymxpc2hSZXF1ZXN0GiEuZ29vZ2xlLnB1YnN1Yi52MS5QdWJsaXNoUmVz",
+            "cG9uc2UiMoLT5JMCLCInL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGljcy8q",
+            "fTpwdWJsaXNoOgEqEm8KCEdldFRvcGljEiEuZ29vZ2xlLnB1YnN1Yi52MS5H",
+            "ZXRUb3BpY1JlcXVlc3QaFy5nb29nbGUucHVic3ViLnYxLlRvcGljIieC0+ST",
+            "AiESHy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn0SgAEKCkxpc3RU",
+            "b3BpY3MSIy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY3NSZXF1ZXN0GiQu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVzcG9uc2UiJ4LT5JMCIRIf",
+            "L3YxL3twcm9qZWN0PXByb2plY3RzLyp9L3RvcGljcxKyAQoWTGlzdFRvcGlj",
+            "U3Vic2NyaXB0aW9ucxIvLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU3Vi",
+            "c2NyaXB0aW9uc1JlcXVlc3QaMC5nb29nbGUucHVic3ViLnYxLkxpc3RUb3Bp",
+            "Y1N1YnNjcmlwdGlvbnNSZXNwb25zZSI1gtPkkwIvEi0vdjEve3RvcGljPXBy",
+            "b2plY3RzLyovdG9waWNzLyp9L3N1YnNjcmlwdGlvbnMSdAoLRGVsZXRlVG9w",
+            "aWMSJC5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVRvcGljUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIngtPkkwIhKh8vdjEve3RvcGljPXByb2pl",
+            "Y3RzLyovdG9waWNzLyp9QiUKFGNvbS5nb29nbGUucHVic3ViLnYxQgtQdWJz",
             "dWJQcm90b1ABYgZwcm90bzM="));
-      descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.Annotations.Descriptor, global::Google.Protobuf.WellKnownTypes.Proto.Empty.Descriptor, },
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Topic), new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PubsubMessage), new[]{ "Data", "Attributes", "MessageId" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.GetTopicRequest), new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PublishRequest), new[]{ "Topic", "Messages" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PublishResponse), new[]{ "MessageIds" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicsRequest), new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicsResponse), new[]{ "Topics", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest), new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsResponse), new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.DeleteTopicRequest), new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Subscription), new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PushConfig), new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ReceivedMessage), new[]{ "AckId", "Message" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.GetSubscriptionRequest), new[]{ "Subscription" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsRequest), new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsResponse), new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.DeleteSubscriptionRequest), new[]{ "Subscription" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ModifyPushConfigRequest), new[]{ "Subscription", "PushConfig" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PullRequest), new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PullResponse), new[]{ "ReceivedMessages" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ModifyAckDeadlineRequest), new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.AcknowledgeRequest), new[]{ "Subscription", "AckIds" }, null, null, null)
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Topic), global::Google.Pubsub.V1.Topic.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PubsubMessage), global::Google.Pubsub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.GetTopicRequest), global::Google.Pubsub.V1.GetTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PublishRequest), global::Google.Pubsub.V1.PublishRequest.Parser, new[]{ "Topic", "Messages" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PublishResponse), global::Google.Pubsub.V1.PublishResponse.Parser, new[]{ "MessageIds" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicsRequest), global::Google.Pubsub.V1.ListTopicsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicsResponse), global::Google.Pubsub.V1.ListTopicsResponse.Parser, new[]{ "Topics", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest), global::Google.Pubsub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsResponse), global::Google.Pubsub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.DeleteTopicRequest), global::Google.Pubsub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.Subscription), global::Google.Pubsub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PushConfig), global::Google.Pubsub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ReceivedMessage), global::Google.Pubsub.V1.ReceivedMessage.Parser, new[]{ "AckId", "Message" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.GetSubscriptionRequest), global::Google.Pubsub.V1.GetSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsRequest), global::Google.Pubsub.V1.ListSubscriptionsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsResponse), global::Google.Pubsub.V1.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.DeleteSubscriptionRequest), global::Google.Pubsub.V1.DeleteSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ModifyPushConfigRequest), global::Google.Pubsub.V1.ModifyPushConfigRequest.Parser, new[]{ "Subscription", "PushConfig" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PullRequest), global::Google.Pubsub.V1.PullRequest.Parser, new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.PullResponse), global::Google.Pubsub.V1.PullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.ModifyAckDeadlineRequest), global::Google.Pubsub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Pubsub.V1.AcknowledgeRequest), global::Google.Pubsub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  ///  A topic resource.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Topic : pb::IMessage<Topic> {
     private static readonly pb::MessageParser<Topic> _parser = new pb::MessageParser<Topic>(() => new Topic());
     public static pb::MessageParser<Topic> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -168,8 +173,17 @@ namespace Google.Pubsub.V1 {
       return new Topic(this);
     }
 
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
+    /// <summary>
+    ///  The name of the topic. It must have the format
+    ///  `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+    ///  and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+    ///  underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+    ///  signs (`%`). It must be between 3 and 255 characters in length, and it
+    ///  must not start with `"goog"`.
+    /// </summary>
     public string Name {
       get { return name_; }
       set {
@@ -199,7 +213,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -243,13 +257,17 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  A message data and its attributes. The message payload must not be empty;
+  ///  it must contain either a non-empty data field, or at least one attribute.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PubsubMessage : pb::IMessage<PubsubMessage> {
     private static readonly pb::MessageParser<PubsubMessage> _parser = new pb::MessageParser<PubsubMessage>(() => new PubsubMessage());
     public static pb::MessageParser<PubsubMessage> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[1]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -272,8 +290,13 @@ namespace Google.Pubsub.V1 {
       return new PubsubMessage(this);
     }
 
+    /// <summary>Field number for the "data" field.</summary>
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  The message payload. For JSON requests, the value of this field must be
+    ///  base64-encoded.
+    /// </summary>
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -281,16 +304,27 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "attributes" field.</summary>
     public const int AttributesFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_attributes_codec
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
+    /// <summary>
+    ///  Optional attributes for this message.
+    /// </summary>
     public pbc::MapField<string, string> Attributes {
       get { return attributes_; }
     }
 
+    /// <summary>Field number for the "message_id" field.</summary>
     public const int MessageIdFieldNumber = 3;
     private string messageId_ = "";
+    /// <summary>
+    ///  ID of this message assigned by the server at publication time. Guaranteed
+    ///  to be unique within the topic. This value may be read by a subscriber
+    ///  that receives a PubsubMessage via a Pull call or a push delivery. It must
+    ///  not be populated by a publisher in a Publish call.
+    /// </summary>
     public string MessageId {
       get { return messageId_; }
       set {
@@ -324,7 +358,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -389,13 +423,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the GetTopic method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GetTopicRequest : pb::IMessage<GetTopicRequest> {
     private static readonly pb::MessageParser<GetTopicRequest> _parser = new pb::MessageParser<GetTopicRequest>(() => new GetTopicRequest());
     public static pb::MessageParser<GetTopicRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[2]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -416,8 +453,12 @@ namespace Google.Pubsub.V1 {
       return new GetTopicRequest(this);
     }
 
+    /// <summary>Field number for the "topic" field.</summary>
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
+    /// <summary>
+    ///  The name of the topic to get.
+    /// </summary>
     public string Topic {
       get { return topic_; }
       set {
@@ -447,7 +488,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -491,13 +532,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the Publish method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PublishRequest : pb::IMessage<PublishRequest> {
     private static readonly pb::MessageParser<PublishRequest> _parser = new pb::MessageParser<PublishRequest>(() => new PublishRequest());
     public static pb::MessageParser<PublishRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[3]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -519,8 +563,12 @@ namespace Google.Pubsub.V1 {
       return new PublishRequest(this);
     }
 
+    /// <summary>Field number for the "topic" field.</summary>
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
+    /// <summary>
+    ///  The messages in the request will be published on this topic.
+    /// </summary>
     public string Topic {
       get { return topic_; }
       set {
@@ -528,10 +576,14 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "messages" field.</summary>
     public const int MessagesFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Pubsub.V1.PubsubMessage> _repeated_messages_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Pubsub.V1.PubsubMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage> messages_ = new pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage>();
+    /// <summary>
+    ///  The messages to publish.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage> Messages {
       get { return messages_; }
     }
@@ -560,7 +612,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -611,13 +663,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Response for the Publish method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PublishResponse : pb::IMessage<PublishResponse> {
     private static readonly pb::MessageParser<PublishResponse> _parser = new pb::MessageParser<PublishResponse>(() => new PublishResponse());
     public static pb::MessageParser<PublishResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[4]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -638,10 +693,16 @@ namespace Google.Pubsub.V1 {
       return new PublishResponse(this);
     }
 
+    /// <summary>Field number for the "message_ids" field.</summary>
     public const int MessageIdsFieldNumber = 1;
     private static readonly pb::FieldCodec<string> _repeated_messageIds_codec
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> messageIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  The server-assigned ID of each published message, in the same order as
+    ///  the messages in the request. IDs are guaranteed to be unique within
+    ///  the topic.
+    /// </summary>
     public pbc::RepeatedField<string> MessageIds {
       get { return messageIds_; }
     }
@@ -668,7 +729,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -705,13 +766,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the ListTopics method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicsRequest : pb::IMessage<ListTopicsRequest> {
     private static readonly pb::MessageParser<ListTopicsRequest> _parser = new pb::MessageParser<ListTopicsRequest>(() => new ListTopicsRequest());
     public static pb::MessageParser<ListTopicsRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[5]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -734,8 +798,12 @@ namespace Google.Pubsub.V1 {
       return new ListTopicsRequest(this);
     }
 
+    /// <summary>Field number for the "project" field.</summary>
     public const int ProjectFieldNumber = 1;
     private string project_ = "";
+    /// <summary>
+    ///  The name of the cloud project that topics belong to.
+    /// </summary>
     public string Project {
       get { return project_; }
       set {
@@ -743,8 +811,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
+    /// <summary>
+    ///  Maximum number of topics to return.
+    /// </summary>
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -752,8 +824,14 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "page_token" field.</summary>
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
+    /// <summary>
+    ///  The value returned by the last ListTopicsResponse; indicates that this is
+    ///  a continuation of a prior ListTopics call, and that the system should
+    ///  return the next page of data.
+    /// </summary>
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -787,7 +865,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -859,13 +937,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Response for the ListTopics method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicsResponse : pb::IMessage<ListTopicsResponse> {
     private static readonly pb::MessageParser<ListTopicsResponse> _parser = new pb::MessageParser<ListTopicsResponse>(() => new ListTopicsResponse());
     public static pb::MessageParser<ListTopicsResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[6]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -887,16 +968,25 @@ namespace Google.Pubsub.V1 {
       return new ListTopicsResponse(this);
     }
 
+    /// <summary>Field number for the "topics" field.</summary>
     public const int TopicsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Pubsub.V1.Topic> _repeated_topics_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Pubsub.V1.Topic.Parser);
     private readonly pbc::RepeatedField<global::Google.Pubsub.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Pubsub.V1.Topic>();
+    /// <summary>
+    ///  The resulting topics.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Pubsub.V1.Topic> Topics {
       get { return topics_; }
     }
 
+    /// <summary>Field number for the "next_page_token" field.</summary>
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
+    /// <summary>
+    ///  If not empty, indicates that there may be more topics that match the
+    ///  request; this value should be passed in a new ListTopicsRequest.
+    /// </summary>
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -928,7 +1018,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -979,13 +1069,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the ListTopicSubscriptions method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicSubscriptionsRequest : pb::IMessage<ListTopicSubscriptionsRequest> {
     private static readonly pb::MessageParser<ListTopicSubscriptionsRequest> _parser = new pb::MessageParser<ListTopicSubscriptionsRequest>(() => new ListTopicSubscriptionsRequest());
     public static pb::MessageParser<ListTopicSubscriptionsRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[7]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1008,8 +1101,12 @@ namespace Google.Pubsub.V1 {
       return new ListTopicSubscriptionsRequest(this);
     }
 
+    /// <summary>Field number for the "topic" field.</summary>
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
+    /// <summary>
+    ///  The name of the topic that subscriptions are attached to.
+    /// </summary>
     public string Topic {
       get { return topic_; }
       set {
@@ -1017,8 +1114,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
+    /// <summary>
+    ///  Maximum number of subscription names to return.
+    /// </summary>
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -1026,8 +1127,14 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "page_token" field.</summary>
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
+    /// <summary>
+    ///  The value returned by the last ListTopicSubscriptionsResponse; indicates
+    ///  that this is a continuation of a prior ListTopicSubscriptions call, and
+    ///  that the system should return the next page of data.
+    /// </summary>
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -1061,7 +1168,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1133,13 +1240,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Response for the ListTopicSubscriptions method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListTopicSubscriptionsResponse : pb::IMessage<ListTopicSubscriptionsResponse> {
     private static readonly pb::MessageParser<ListTopicSubscriptionsResponse> _parser = new pb::MessageParser<ListTopicSubscriptionsResponse>(() => new ListTopicSubscriptionsResponse());
     public static pb::MessageParser<ListTopicSubscriptionsResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[8]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1161,16 +1271,26 @@ namespace Google.Pubsub.V1 {
       return new ListTopicSubscriptionsResponse(this);
     }
 
+    /// <summary>Field number for the "subscriptions" field.</summary>
     public const int SubscriptionsFieldNumber = 1;
     private static readonly pb::FieldCodec<string> _repeated_subscriptions_codec
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> subscriptions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  The names of the subscriptions that match the request.
+    /// </summary>
     public pbc::RepeatedField<string> Subscriptions {
       get { return subscriptions_; }
     }
 
+    /// <summary>Field number for the "next_page_token" field.</summary>
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
+    /// <summary>
+    ///  If not empty, indicates that there may be more subscriptions that match
+    ///  the request; this value should be passed in a new
+    ///  ListTopicSubscriptionsRequest to get more subscriptions.
+    /// </summary>
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1202,7 +1322,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1253,13 +1373,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the DeleteTopic method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DeleteTopicRequest : pb::IMessage<DeleteTopicRequest> {
     private static readonly pb::MessageParser<DeleteTopicRequest> _parser = new pb::MessageParser<DeleteTopicRequest>(() => new DeleteTopicRequest());
     public static pb::MessageParser<DeleteTopicRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[9]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1280,8 +1403,12 @@ namespace Google.Pubsub.V1 {
       return new DeleteTopicRequest(this);
     }
 
+    /// <summary>Field number for the "topic" field.</summary>
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
+    /// <summary>
+    ///  Name of the topic to delete.
+    /// </summary>
     public string Topic {
       get { return topic_; }
       set {
@@ -1311,7 +1438,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1355,13 +1482,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  A subscription resource.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Subscription : pb::IMessage<Subscription> {
     private static readonly pb::MessageParser<Subscription> _parser = new pb::MessageParser<Subscription>(() => new Subscription());
     public static pb::MessageParser<Subscription> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[10]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1385,8 +1515,17 @@ namespace Google.Pubsub.V1 {
       return new Subscription(this);
     }
 
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
+    /// <summary>
+    ///  The name of the subscription. It must have the format
+    ///  `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
+    ///  start with a letter, and contain only letters (`[A-Za-z]`), numbers
+    ///  (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
+    ///  plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
+    ///  in length, and it must not start with `"goog"`.
+    /// </summary>
     public string Name {
       get { return name_; }
       set {
@@ -1394,8 +1533,14 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "topic" field.</summary>
     public const int TopicFieldNumber = 2;
     private string topic_ = "";
+    /// <summary>
+    ///  The name of the topic from which this subscription is receiving messages.
+    ///  The value of this field will be `_deleted-topic_` if the topic has been
+    ///  deleted.
+    /// </summary>
     public string Topic {
       get { return topic_; }
       set {
@@ -1403,8 +1548,14 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "push_config" field.</summary>
     public const int PushConfigFieldNumber = 4;
     private global::Google.Pubsub.V1.PushConfig pushConfig_;
+    /// <summary>
+    ///  If push delivery is used with this subscription, this field is
+    ///  used to configure it. An empty pushConfig signifies that the subscriber
+    ///  will pull and ack messages using API methods.
+    /// </summary>
     public global::Google.Pubsub.V1.PushConfig PushConfig {
       get { return pushConfig_; }
       set {
@@ -1412,8 +1563,28 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "ack_deadline_seconds" field.</summary>
     public const int AckDeadlineSecondsFieldNumber = 5;
     private int ackDeadlineSeconds_;
+    /// <summary>
+    ///  This value is the maximum time after a subscriber receives a message
+    ///  before the subscriber should acknowledge the message. After message
+    ///  delivery but before the ack deadline expires and before the message is
+    ///  acknowledged, it is an outstanding message and will not be delivered
+    ///  again during that time (on a best-effort basis).
+    ///
+    ///  For pull delivery this value is used as the initial value for the ack
+    ///  deadline. To override this value for a given message, call
+    ///  ModifyAckDeadline with the corresponding ack_id.
+    ///
+    ///  For push delivery, this value is also used to set the request timeout for
+    ///  the call to the push endpoint.
+    ///
+    ///  If the subscriber never acknowledges the message, the Pub/Sub
+    ///  system will eventually redeliver the message.
+    ///
+    ///  If this parameter is not set, the default value of 10 seconds is used.
+    /// </summary>
     public int AckDeadlineSeconds {
       get { return ackDeadlineSeconds_; }
       set {
@@ -1449,7 +1620,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1541,13 +1712,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Configuration for a push delivery endpoint.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PushConfig : pb::IMessage<PushConfig> {
     private static readonly pb::MessageParser<PushConfig> _parser = new pb::MessageParser<PushConfig>(() => new PushConfig());
     public static pb::MessageParser<PushConfig> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[11]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1569,8 +1743,13 @@ namespace Google.Pubsub.V1 {
       return new PushConfig(this);
     }
 
+    /// <summary>Field number for the "push_endpoint" field.</summary>
     public const int PushEndpointFieldNumber = 1;
     private string pushEndpoint_ = "";
+    /// <summary>
+    ///  A URL locating the endpoint to which messages should be pushed.
+    ///  For example, a Webhook endpoint might use "https://example.com/push".
+    /// </summary>
     public string PushEndpoint {
       get { return pushEndpoint_; }
       set {
@@ -1578,10 +1757,35 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "attributes" field.</summary>
     public const int AttributesFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_attributes_codec
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
+    /// <summary>
+    ///  Endpoint configuration attributes.
+    ///
+    ///  Every endpoint has a set of API supported attributes that can be used to
+    ///  control different aspects of the message delivery.
+    ///
+    ///  The currently supported attribute is `x-goog-version`, which you can
+    ///  use to change the format of the push message. This attribute
+    ///  indicates the version of the data expected by the endpoint. This
+    ///  controls the shape of the envelope (i.e. its fields and metadata).
+    ///  The endpoint version is based on the version of the Pub/Sub
+    ///  API.
+    ///
+    ///  If not present during the CreateSubscription call, it will default to
+    ///  the version of the API used to make such call. If not present during a
+    ///  ModifyPushConfig call, its value will not be changed. GetSubscription
+    ///  calls will always return a valid version, even if the subscription was
+    ///  created without this attribute.
+    ///
+    ///  The possible values for this attribute are:
+    ///
+    ///  * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API.
+    ///  * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
+    /// </summary>
     public pbc::MapField<string, string> Attributes {
       get { return attributes_; }
     }
@@ -1610,7 +1814,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1661,13 +1865,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  A message and its corresponding acknowledgment ID.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ReceivedMessage : pb::IMessage<ReceivedMessage> {
     private static readonly pb::MessageParser<ReceivedMessage> _parser = new pb::MessageParser<ReceivedMessage>(() => new ReceivedMessage());
     public static pb::MessageParser<ReceivedMessage> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[12]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1689,8 +1896,12 @@ namespace Google.Pubsub.V1 {
       return new ReceivedMessage(this);
     }
 
+    /// <summary>Field number for the "ack_id" field.</summary>
     public const int AckIdFieldNumber = 1;
     private string ackId_ = "";
+    /// <summary>
+    ///  This ID can be used to acknowledge the received message.
+    /// </summary>
     public string AckId {
       get { return ackId_; }
       set {
@@ -1698,8 +1909,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 2;
     private global::Google.Pubsub.V1.PubsubMessage message_;
+    /// <summary>
+    ///  The message.
+    /// </summary>
     public global::Google.Pubsub.V1.PubsubMessage Message {
       get { return message_; }
       set {
@@ -1731,7 +1946,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1795,13 +2010,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the GetSubscription method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GetSubscriptionRequest : pb::IMessage<GetSubscriptionRequest> {
     private static readonly pb::MessageParser<GetSubscriptionRequest> _parser = new pb::MessageParser<GetSubscriptionRequest>(() => new GetSubscriptionRequest());
     public static pb::MessageParser<GetSubscriptionRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[13]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1822,8 +2040,12 @@ namespace Google.Pubsub.V1 {
       return new GetSubscriptionRequest(this);
     }
 
+    /// <summary>Field number for the "subscription" field.</summary>
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
+    /// <summary>
+    ///  The name of the subscription to get.
+    /// </summary>
     public string Subscription {
       get { return subscription_; }
       set {
@@ -1853,7 +2075,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1897,13 +2119,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the ListSubscriptions method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListSubscriptionsRequest : pb::IMessage<ListSubscriptionsRequest> {
     private static readonly pb::MessageParser<ListSubscriptionsRequest> _parser = new pb::MessageParser<ListSubscriptionsRequest>(() => new ListSubscriptionsRequest());
     public static pb::MessageParser<ListSubscriptionsRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1926,8 +2151,12 @@ namespace Google.Pubsub.V1 {
       return new ListSubscriptionsRequest(this);
     }
 
+    /// <summary>Field number for the "project" field.</summary>
     public const int ProjectFieldNumber = 1;
     private string project_ = "";
+    /// <summary>
+    ///  The name of the cloud project that subscriptions belong to.
+    /// </summary>
     public string Project {
       get { return project_; }
       set {
@@ -1935,8 +2164,12 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
+    /// <summary>
+    ///  Maximum number of subscriptions to return.
+    /// </summary>
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -1944,8 +2177,14 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "page_token" field.</summary>
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
+    /// <summary>
+    ///  The value returned by the last ListSubscriptionsResponse; indicates that
+    ///  this is a continuation of a prior ListSubscriptions call, and that the
+    ///  system should return the next page of data.
+    /// </summary>
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -1979,7 +2218,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2051,13 +2290,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Response for the ListSubscriptions method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ListSubscriptionsResponse : pb::IMessage<ListSubscriptionsResponse> {
     private static readonly pb::MessageParser<ListSubscriptionsResponse> _parser = new pb::MessageParser<ListSubscriptionsResponse>(() => new ListSubscriptionsResponse());
     public static pb::MessageParser<ListSubscriptionsResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2079,16 +2321,26 @@ namespace Google.Pubsub.V1 {
       return new ListSubscriptionsResponse(this);
     }
 
+    /// <summary>Field number for the "subscriptions" field.</summary>
     public const int SubscriptionsFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Pubsub.V1.Subscription> _repeated_subscriptions_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Pubsub.V1.Subscription.Parser);
     private readonly pbc::RepeatedField<global::Google.Pubsub.V1.Subscription> subscriptions_ = new pbc::RepeatedField<global::Google.Pubsub.V1.Subscription>();
+    /// <summary>
+    ///  The subscriptions that match the request.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Pubsub.V1.Subscription> Subscriptions {
       get { return subscriptions_; }
     }
 
+    /// <summary>Field number for the "next_page_token" field.</summary>
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
+    /// <summary>
+    ///  If not empty, indicates that there may be more subscriptions that match
+    ///  the request; this value should be passed in a new ListSubscriptionsRequest
+    ///  to get more subscriptions.
+    /// </summary>
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -2120,7 +2372,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2171,13 +2423,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the DeleteSubscription method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class DeleteSubscriptionRequest : pb::IMessage<DeleteSubscriptionRequest> {
     private static readonly pb::MessageParser<DeleteSubscriptionRequest> _parser = new pb::MessageParser<DeleteSubscriptionRequest>(() => new DeleteSubscriptionRequest());
     public static pb::MessageParser<DeleteSubscriptionRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2198,8 +2453,12 @@ namespace Google.Pubsub.V1 {
       return new DeleteSubscriptionRequest(this);
     }
 
+    /// <summary>Field number for the "subscription" field.</summary>
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
+    /// <summary>
+    ///  The subscription to delete.
+    /// </summary>
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2229,7 +2488,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2273,13 +2532,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the ModifyPushConfig method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ModifyPushConfigRequest : pb::IMessage<ModifyPushConfigRequest> {
     private static readonly pb::MessageParser<ModifyPushConfigRequest> _parser = new pb::MessageParser<ModifyPushConfigRequest>(() => new ModifyPushConfigRequest());
     public static pb::MessageParser<ModifyPushConfigRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2301,8 +2563,12 @@ namespace Google.Pubsub.V1 {
       return new ModifyPushConfigRequest(this);
     }
 
+    /// <summary>Field number for the "subscription" field.</summary>
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
+    /// <summary>
+    ///  The name of the subscription.
+    /// </summary>
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2310,8 +2576,17 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "push_config" field.</summary>
     public const int PushConfigFieldNumber = 2;
     private global::Google.Pubsub.V1.PushConfig pushConfig_;
+    /// <summary>
+    ///  The push configuration for future deliveries.
+    ///
+    ///  An empty pushConfig indicates that the Pub/Sub system should
+    ///  stop pushing messages from the given subscription and allow
+    ///  messages to be pulled and acknowledged - effectively pausing
+    ///  the subscription if Pull is not called.
+    /// </summary>
     public global::Google.Pubsub.V1.PushConfig PushConfig {
       get { return pushConfig_; }
       set {
@@ -2343,7 +2618,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2407,13 +2682,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the Pull method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PullRequest : pb::IMessage<PullRequest> {
     private static readonly pb::MessageParser<PullRequest> _parser = new pb::MessageParser<PullRequest>(() => new PullRequest());
     public static pb::MessageParser<PullRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2436,8 +2714,12 @@ namespace Google.Pubsub.V1 {
       return new PullRequest(this);
     }
 
+    /// <summary>Field number for the "subscription" field.</summary>
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
+    /// <summary>
+    ///  The subscription from which messages should be pulled.
+    /// </summary>
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2445,8 +2727,16 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "return_immediately" field.</summary>
     public const int ReturnImmediatelyFieldNumber = 2;
     private bool returnImmediately_;
+    /// <summary>
+    ///  If this is specified as true the system will respond immediately even if
+    ///  it is not able to return a message in the Pull response. Otherwise the
+    ///  system is allowed to wait until at least one message is available rather
+    ///  than returning no messages. The client may cancel the request if it does
+    ///  not wish to wait any longer for the response.
+    /// </summary>
     public bool ReturnImmediately {
       get { return returnImmediately_; }
       set {
@@ -2454,8 +2744,13 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "max_messages" field.</summary>
     public const int MaxMessagesFieldNumber = 3;
     private int maxMessages_;
+    /// <summary>
+    ///  The maximum number of messages returned for this request. The Pub/Sub
+    ///  system may return fewer than the number specified.
+    /// </summary>
     public int MaxMessages {
       get { return maxMessages_; }
       set {
@@ -2489,7 +2784,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2561,13 +2856,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Response for the Pull method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PullResponse : pb::IMessage<PullResponse> {
     private static readonly pb::MessageParser<PullResponse> _parser = new pb::MessageParser<PullResponse>(() => new PullResponse());
     public static pb::MessageParser<PullResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2588,10 +2886,17 @@ namespace Google.Pubsub.V1 {
       return new PullResponse(this);
     }
 
+    /// <summary>Field number for the "received_messages" field.</summary>
     public const int ReceivedMessagesFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Pubsub.V1.ReceivedMessage> _repeated_receivedMessages_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Pubsub.V1.ReceivedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage>();
+    /// <summary>
+    ///  Received Pub/Sub messages. The Pub/Sub system will return zero messages if
+    ///  there are no more available in the backlog. The Pub/Sub system may return
+    ///  fewer than the maxMessages requested even if there are more messages
+    ///  available in the backlog.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage> ReceivedMessages {
       get { return receivedMessages_; }
     }
@@ -2618,7 +2923,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2655,13 +2960,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the ModifyAckDeadline method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ModifyAckDeadlineRequest : pb::IMessage<ModifyAckDeadlineRequest> {
     private static readonly pb::MessageParser<ModifyAckDeadlineRequest> _parser = new pb::MessageParser<ModifyAckDeadlineRequest>(() => new ModifyAckDeadlineRequest());
     public static pb::MessageParser<ModifyAckDeadlineRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2684,8 +2992,12 @@ namespace Google.Pubsub.V1 {
       return new ModifyAckDeadlineRequest(this);
     }
 
+    /// <summary>Field number for the "subscription" field.</summary>
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
+    /// <summary>
+    ///  The name of the subscription.
+    /// </summary>
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2693,16 +3005,28 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "ack_ids" field.</summary>
     public const int AckIdsFieldNumber = 4;
     private static readonly pb::FieldCodec<string> _repeated_ackIds_codec
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  List of acknowledgment IDs.
+    /// </summary>
     public pbc::RepeatedField<string> AckIds {
       get { return ackIds_; }
     }
 
+    /// <summary>Field number for the "ack_deadline_seconds" field.</summary>
     public const int AckDeadlineSecondsFieldNumber = 3;
     private int ackDeadlineSeconds_;
+    /// <summary>
+    ///  The new ack deadline with respect to the time this request was sent to the
+    ///  Pub/Sub system. Must be >= 0. For example, if the value is 10, the new ack
+    ///  deadline will expire 10 seconds after the ModifyAckDeadline call was made.
+    ///  Specifying zero may immediately make the message available for another pull
+    ///  request.
+    /// </summary>
     public int AckDeadlineSeconds {
       get { return ackDeadlineSeconds_; }
       set {
@@ -2736,7 +3060,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2801,13 +3125,16 @@ namespace Google.Pubsub.V1 {
 
   }
 
+  /// <summary>
+  ///  Request for the Acknowledge method.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AcknowledgeRequest : pb::IMessage<AcknowledgeRequest> {
     private static readonly pb::MessageParser<AcknowledgeRequest> _parser = new pb::MessageParser<AcknowledgeRequest>(() => new AcknowledgeRequest());
     public static pb::MessageParser<AcknowledgeRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.Pubsub.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2829,8 +3156,12 @@ namespace Google.Pubsub.V1 {
       return new AcknowledgeRequest(this);
     }
 
+    /// <summary>Field number for the "subscription" field.</summary>
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
+    /// <summary>
+    ///  The subscription whose message is being acknowledged.
+    /// </summary>
     public string Subscription {
       get { return subscription_; }
       set {
@@ -2838,10 +3169,15 @@ namespace Google.Pubsub.V1 {
       }
     }
 
+    /// <summary>Field number for the "ack_ids" field.</summary>
     public const int AckIdsFieldNumber = 2;
     private static readonly pb::FieldCodec<string> _repeated_ackIds_codec
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  The acknowledgment ID for the messages being acknowledged that was returned
+    ///  by the Pub/Sub system in the Pull response. Must not be empty.
+    /// </summary>
     public pbc::RepeatedField<string> AckIds {
       get { return ackIds_; }
     }
@@ -2870,7 +3206,7 @@ namespace Google.Pubsub.V1 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
