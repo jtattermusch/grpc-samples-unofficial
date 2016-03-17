@@ -27,16 +27,12 @@ namespace CloudPubsubExample
             // 2. enable cloud pubsub API on that project
             // 3. 'gcloud auth login' to store your google credential in a well known location (from where GoogleCredential.GetApplicationDefaultAsync() can pick it up).
 
-            var googleCredential = GoogleCredential.GetApplicationDefaultAsync().GetAwaiter().GetResult();
+            var credentials = Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
 
-            Channel channel = new Channel("pubsub-experimental.googleapis.com", new SslCredentials(File.ReadAllText(@"C:\Users\jtattermusch\certs\cacerts\roots.pem")));
+            Channel channel = new Channel("pubsub-experimental.googleapis.com", credentials.ToChannelCredentials());
 
-            var publisherClient = new Google.Pubsub.V1.Publisher.PublisherClient(channel) {
-                HeaderInterceptor = AuthInterceptors.FromCredential(googleCredential)
-            };
-            var subscriberClient = new Google.Pubsub.V1.Subscriber.SubscriberClient(channel) {
-                HeaderInterceptor = AuthInterceptors.FromCredential(googleCredential)
-            };
+            var publisherClient = new Google.Pubsub.V1.Publisher.PublisherClient(channel);
+            var subscriberClient = new Google.Pubsub.V1.Subscriber.SubscriberClient(channel);
 
             var topics = publisherClient.ListTopics(new ListTopicsRequest { Project = ProjectName }).Topics;
 
