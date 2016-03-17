@@ -9,71 +9,85 @@ using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Datastore.V1Beta3 {
 
-  namespace Proto {
+  /// <summary>Holder for reflection information generated from google/datastore/v1beta3/entity.proto</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public static partial class EntityReflection {
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public static partial class Entity {
-
-      #region Descriptor
-      public static pbr::FileDescriptor Descriptor {
-        get { return descriptor; }
-      }
-      private static pbr::FileDescriptor descriptor;
-
-      static Entity() {
-        byte[] descriptorData = global::System.Convert.FromBase64String(
-            string.Concat(
-              "CiVnb29nbGUvZGF0YXN0b3JlL3YxYmV0YTMvZW50aXR5LnByb3RvEhhnb29n", 
-              "bGUuZGF0YXN0b3JlLnYxYmV0YTMaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu", 
-              "cHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9w", 
-              "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5w", 
-              "cm90byI3CgtQYXJ0aXRpb25JZBISCgpwcm9qZWN0X2lkGAIgASgJEhQKDG5h", 
-              "bWVzcGFjZV9pZBgEIAEoCSLBAQoDS2V5EjsKDHBhcnRpdGlvbl9pZBgBIAEo", 
-              "CzIlLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5QYXJ0aXRpb25JZBI3CgRw", 
-              "YXRoGAIgAygLMikuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLktleS5QYXRo", 
-              "RWxlbWVudBpECgtQYXRoRWxlbWVudBIMCgRraW5kGAEgASgJEgwKAmlkGAIg", 
-              "ASgDSAASDgoEbmFtZRgDIAEoCUgAQgkKB2lkX3R5cGUiPQoKQXJyYXlWYWx1", 
-              "ZRIvCgZ2YWx1ZXMYASADKAsyHy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMu", 
-              "VmFsdWUigAQKBVZhbHVlEjAKCm51bGxfdmFsdWUYCyABKA4yGi5nb29nbGUu", 
-              "cHJvdG9idWYuTnVsbFZhbHVlSAASFwoNYm9vbGVhbl92YWx1ZRgBIAEoCEgA", 
-              "EhcKDWludGVnZXJfdmFsdWUYAiABKANIABIWCgxkb3VibGVfdmFsdWUYAyAB", 
-              "KAFIABI1Cg90aW1lc3RhbXBfdmFsdWUYCiABKAsyGi5nb29nbGUucHJvdG9i", 
-              "dWYuVGltZXN0YW1wSAASMgoJa2V5X3ZhbHVlGAUgASgLMh0uZ29vZ2xlLmRh", 
-              "dGFzdG9yZS52MWJldGEzLktleUgAEhYKDHN0cmluZ192YWx1ZRgRIAEoCUgA", 
-              "EhQKCmJsb2JfdmFsdWUYEiABKAxIABIuCg9nZW9fcG9pbnRfdmFsdWUYCCAB", 
-              "KAsyEy5nb29nbGUudHlwZS5MYXRMbmdIABI4CgxlbnRpdHlfdmFsdWUYBiAB", 
-              "KAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5SAASOwoLYXJy", 
-              "YXlfdmFsdWUYCSABKAsyJC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuQXJy", 
-              "YXlWYWx1ZUgAEg8KB21lYW5pbmcYDiABKAUSHAoUZXhjbHVkZV9mcm9tX2lu", 
-              "ZGV4ZXMYEyABKAhCDAoKdmFsdWVfdHlwZSLOAQoGRW50aXR5EioKA2tleRgB", 
-              "IAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5LZXkSRAoKcHJvcGVy", 
-              "dGllcxgDIAMoCzIwLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5FbnRpdHku", 
-              "UHJvcGVydGllc0VudHJ5GlIKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASAB", 
-              "KAkSLgoFdmFsdWUYAiABKAsyHy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMu", 
-              "VmFsdWU6AjgBQi0KHGNvbS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTNCC0Vu", 
-              "dGl0eVByb3RvUAFiBnByb3RvMw=="));
-        descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-            new pbr::FileDescriptor[] { global::Google.Api.Annotations.Descriptor, global::Google.Protobuf.WellKnownTypes.Proto.Struct.Descriptor, global::Google.Protobuf.WellKnownTypes.Proto.Timestamp.Descriptor, global::Google.Type.Latlng.Descriptor, },
-            new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PartitionId), new[]{ "ProjectId", "NamespaceId" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Key), new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedCodeInfo[] { new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Key.Types.PathElement), new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.ArrayValue), new[]{ "Values" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Value), new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "KeyValue", "StringValue", "BlobValue", "GeoPointValue", "EntityValue", "ArrayValue", "Meaning", "ExcludeFromIndexes" }, new[]{ "ValueType" }, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Entity), new[]{ "Key", "Properties" }, null, null, new pbr::GeneratedCodeInfo[] { null, })
-            }));
-      }
-      #endregion
-
+    #region Descriptor
+    /// <summary>File descriptor for google/datastore/v1beta3/entity.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
     }
+    private static pbr::FileDescriptor descriptor;
+
+    static EntityReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "CiVnb29nbGUvZGF0YXN0b3JlL3YxYmV0YTMvZW50aXR5LnByb3RvEhhnb29n",
+            "bGUuZGF0YXN0b3JlLnYxYmV0YTMaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
+            "cHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aGGdvb2dsZS90eXBlL2xhdGxuZy5w",
+            "cm90byI3CgtQYXJ0aXRpb25JZBISCgpwcm9qZWN0X2lkGAIgASgJEhQKDG5h",
+            "bWVzcGFjZV9pZBgEIAEoCSLBAQoDS2V5EjsKDHBhcnRpdGlvbl9pZBgBIAEo",
+            "CzIlLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5QYXJ0aXRpb25JZBI3CgRw",
+            "YXRoGAIgAygLMikuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLktleS5QYXRo",
+            "RWxlbWVudBpECgtQYXRoRWxlbWVudBIMCgRraW5kGAEgASgJEgwKAmlkGAIg",
+            "ASgDSAASDgoEbmFtZRgDIAEoCUgAQgkKB2lkX3R5cGUiPQoKQXJyYXlWYWx1",
+            "ZRIvCgZ2YWx1ZXMYASADKAsyHy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMu",
+            "VmFsdWUigAQKBVZhbHVlEjAKCm51bGxfdmFsdWUYCyABKA4yGi5nb29nbGUu",
+            "cHJvdG9idWYuTnVsbFZhbHVlSAASFwoNYm9vbGVhbl92YWx1ZRgBIAEoCEgA",
+            "EhcKDWludGVnZXJfdmFsdWUYAiABKANIABIWCgxkb3VibGVfdmFsdWUYAyAB",
+            "KAFIABI1Cg90aW1lc3RhbXBfdmFsdWUYCiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wSAASMgoJa2V5X3ZhbHVlGAUgASgLMh0uZ29vZ2xlLmRh",
+            "dGFzdG9yZS52MWJldGEzLktleUgAEhYKDHN0cmluZ192YWx1ZRgRIAEoCUgA",
+            "EhQKCmJsb2JfdmFsdWUYEiABKAxIABIuCg9nZW9fcG9pbnRfdmFsdWUYCCAB",
+            "KAsyEy5nb29nbGUudHlwZS5MYXRMbmdIABI4CgxlbnRpdHlfdmFsdWUYBiAB",
+            "KAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5SAASOwoLYXJy",
+            "YXlfdmFsdWUYCSABKAsyJC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuQXJy",
+            "YXlWYWx1ZUgAEg8KB21lYW5pbmcYDiABKAUSHAoUZXhjbHVkZV9mcm9tX2lu",
+            "ZGV4ZXMYEyABKAhCDAoKdmFsdWVfdHlwZSLOAQoGRW50aXR5EioKA2tleRgB",
+            "IAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5LZXkSRAoKcHJvcGVy",
+            "dGllcxgDIAMoCzIwLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5FbnRpdHku",
+            "UHJvcGVydGllc0VudHJ5GlIKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSLgoFdmFsdWUYAiABKAsyHy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMu",
+            "VmFsdWU6AjgBQi0KHGNvbS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTNCC0Vu",
+            "dGl0eVByb3RvUAFiBnByb3RvMw=="));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PartitionId), global::Google.Datastore.V1Beta3.PartitionId.Parser, new[]{ "ProjectId", "NamespaceId" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Key), global::Google.Datastore.V1Beta3.Key.Parser, new[]{ "PartitionId", "Path" }, null, null, new pbr::GeneratedCodeInfo[] { new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Key.Types.PathElement), global::Google.Datastore.V1Beta3.Key.Types.PathElement.Parser, new[]{ "Kind", "Id", "Name" }, new[]{ "IdType" }, null, null)}),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.ArrayValue), global::Google.Datastore.V1Beta3.ArrayValue.Parser, new[]{ "Values" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Value), global::Google.Datastore.V1Beta3.Value.Parser, new[]{ "NullValue", "BooleanValue", "IntegerValue", "DoubleValue", "TimestampValue", "KeyValue", "StringValue", "BlobValue", "GeoPointValue", "EntityValue", "ArrayValue", "Meaning", "ExcludeFromIndexes" }, new[]{ "ValueType" }, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Entity), global::Google.Datastore.V1Beta3.Entity.Parser, new[]{ "Key", "Properties" }, null, null, new pbr::GeneratedCodeInfo[] { null, })
+          }));
+    }
+    #endregion
+
   }
   #region Messages
+  /// <summary>
+  ///  A partition ID identifies a grouping of entities. The grouping is always
+  ///  by project and namespace, however the namespace ID may be empty.
+  ///
+  ///  A partition ID contains several dimensions:
+  ///  project ID and namespace ID.
+  ///  Partition dimensions:
+  ///  A dimension may be `""`.
+  ///  A dimension must be valid UTF-8 bytes.
+  ///  A dimension's value must match regex `[A-Za-z\d\.\-_]{1,100}`
+  ///  If the value of any dimension matches regex `__.*__`, the partition is
+  ///  reserved/read-only.
+  ///  A reserved/read-only partition ID is forbidden in certain documented
+  ///  contexts.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PartitionId : pb::IMessage<PartitionId> {
     private static readonly pb::MessageParser<PartitionId> _parser = new pb::MessageParser<PartitionId>(() => new PartitionId());
     public static pb::MessageParser<PartitionId> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Datastore.V1Beta3.EntityReflection.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -95,8 +109,12 @@ namespace Google.Datastore.V1Beta3 {
       return new PartitionId(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 2;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -104,8 +122,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "namespace_id" field.</summary>
     public const int NamespaceIdFieldNumber = 4;
     private string namespaceId_ = "";
+    /// <summary>
+    ///  Namespace ID.
+    /// </summary>
     public string NamespaceId {
       get { return namespaceId_; }
       set {
@@ -137,7 +159,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -195,13 +217,19 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A unique identifier for an entity.
+  ///  If a key's partition id or any of its path kinds or names are
+  ///  reserved/read-only, the key is reserved/read-only.
+  ///  A reserved/read-only key is forbidden in certain documented contexts.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Key : pb::IMessage<Key> {
     private static readonly pb::MessageParser<Key> _parser = new pb::MessageParser<Key>(() => new Key());
     public static pb::MessageParser<Key> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Datastore.V1Beta3.EntityReflection.Descriptor.MessageTypes[1]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -223,8 +251,14 @@ namespace Google.Datastore.V1Beta3 {
       return new Key(this);
     }
 
+    /// <summary>Field number for the "partition_id" field.</summary>
     public const int PartitionIdFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.PartitionId partitionId_;
+    /// <summary>
+    ///  Entities are partitioned into subsets, currently identified by a dataset
+    ///  (usually implicitly specified by the project) and namespace ID.
+    ///  Queries are scoped to a single partition.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PartitionId PartitionId {
       get { return partitionId_; }
       set {
@@ -232,10 +266,25 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "path" field.</summary>
     public const int PathFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Key.Types.PathElement> _repeated_path_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.Key.Types.PathElement.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key.Types.PathElement> path_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key.Types.PathElement>();
+    /// <summary>
+    ///  The entity path.
+    ///  An entity path consists of one or more elements composed of a kind and a
+    ///  string or numerical identifier, which identify entities. The first
+    ///  element identifies a _root entity_, the second element identifies
+    ///  a _child_ of the root entity, the third element a child of the
+    ///  second entity, and so forth. The entities identified by all prefixes of
+    ///  the path are called the element's _ancestors_.
+    ///  An entity path is always fully complete: *all* of the entity's ancestors
+    ///  are required to be in the path along with the entity identifier itself.
+    ///  The only exception is that in some documented cases, the identifier in the
+    ///  last path element (for the entity) itself may be omitted. A path can never
+    ///  be empty. The path can have at most 100 elements.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key.Types.PathElement> Path {
       get { return path_; }
     }
@@ -264,7 +313,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -320,8 +369,15 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the Key message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  A (kind, ID/name) pair used to construct a key path.
+      ///
+      ///  If either name nor ID is set, the element is complete.
+      ///  If neither is set, the element is incomplete.
+      /// </summary>
       [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
       public sealed partial class PathElement : pb::IMessage<PathElement> {
         private static readonly pb::MessageParser<PathElement> _parser = new pb::MessageParser<PathElement>(() => new PathElement());
@@ -358,8 +414,15 @@ namespace Google.Datastore.V1Beta3 {
           return new PathElement(this);
         }
 
+        /// <summary>Field number for the "kind" field.</summary>
         public const int KindFieldNumber = 1;
         private string kind_ = "";
+        /// <summary>
+        ///  The kind of the entity.
+        ///  A kind matching regex `__.*__` is reserved/read-only.
+        ///  A kind must not contain more than 1500 bytes when UTF-8 encoded.
+        ///  Cannot be `""`.
+        /// </summary>
         public string Kind {
           get { return kind_; }
           set {
@@ -367,7 +430,13 @@ namespace Google.Datastore.V1Beta3 {
           }
         }
 
+        /// <summary>Field number for the "id" field.</summary>
         public const int IdFieldNumber = 2;
+        /// <summary>
+        ///  The auto allocated ID of the entity.
+        ///  Never equal to zero. Values less than zero are discouraged and may not
+        ///  be supported in the future.
+        /// </summary>
         public long Id {
           get { return idTypeCase_ == IdTypeOneofCase.Id ? (long) idType_ : 0L; }
           set {
@@ -376,7 +445,14 @@ namespace Google.Datastore.V1Beta3 {
           }
         }
 
+        /// <summary>Field number for the "name" field.</summary>
         public const int NameFieldNumber = 3;
+        /// <summary>
+        ///  The name of the entity.
+        ///  A name matching regex `__.*__` is reserved/read-only.
+        ///  A name must not be more than 1500 bytes when UTF-8 encoded.
+        ///  Cannot be `""`.
+        /// </summary>
         public string Name {
           get { return idTypeCase_ == IdTypeOneofCase.Name ? (string) idType_ : ""; }
           set {
@@ -386,6 +462,7 @@ namespace Google.Datastore.V1Beta3 {
         }
 
         private object idType_;
+        /// <summary>Enum of possible cases for the "id_type" oneof.</summary>
         public enum IdTypeOneofCase {
           None = 0,
           Id = 2,
@@ -415,6 +492,7 @@ namespace Google.Datastore.V1Beta3 {
           if (Kind != other.Kind) return false;
           if (Id != other.Id) return false;
           if (Name != other.Name) return false;
+          if (IdTypeCase != other.IdTypeCase) return false;
           return true;
         }
 
@@ -423,11 +501,12 @@ namespace Google.Datastore.V1Beta3 {
           if (Kind.Length != 0) hash ^= Kind.GetHashCode();
           if (idTypeCase_ == IdTypeOneofCase.Id) hash ^= Id.GetHashCode();
           if (idTypeCase_ == IdTypeOneofCase.Name) hash ^= Name.GetHashCode();
+          hash ^= (int) idTypeCase_;
           return hash;
         }
 
         public override string ToString() {
-          return pb::JsonFormatter.Default.Format(this);
+          return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         public void WriteTo(pb::CodedOutputStream output) {
@@ -507,13 +586,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  An array value.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ArrayValue : pb::IMessage<ArrayValue> {
     private static readonly pb::MessageParser<ArrayValue> _parser = new pb::MessageParser<ArrayValue>(() => new ArrayValue());
     public static pb::MessageParser<ArrayValue> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Datastore.V1Beta3.EntityReflection.Descriptor.MessageTypes[2]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -534,10 +616,14 @@ namespace Google.Datastore.V1Beta3 {
       return new ArrayValue(this);
     }
 
+    /// <summary>Field number for the "values" field.</summary>
     public const int ValuesFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Value> _repeated_values_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Datastore.V1Beta3.Value.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Value> values_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Value>();
+    /// <summary>
+    ///  Values in the array.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Value> Values {
       get { return values_; }
     }
@@ -564,7 +650,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -601,13 +687,17 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A message that can hold any of the supported value types and associated
+  ///  metadata.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Value : pb::IMessage<Value> {
     private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
     public static pb::MessageParser<Value> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Datastore.V1Beta3.EntityReflection.Descriptor.MessageTypes[3]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -665,7 +755,11 @@ namespace Google.Datastore.V1Beta3 {
       return new Value(this);
     }
 
+    /// <summary>Field number for the "null_value" field.</summary>
     public const int NullValueFieldNumber = 11;
+    /// <summary>
+    ///  A null value.
+    /// </summary>
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.NullValue ? (global::Google.Protobuf.WellKnownTypes.NullValue) valueType_ : global::Google.Protobuf.WellKnownTypes.NullValue.NULL_VALUE; }
       set {
@@ -674,7 +768,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "boolean_value" field.</summary>
     public const int BooleanValueFieldNumber = 1;
+    /// <summary>
+    ///  A boolean value.
+    /// </summary>
     public bool BooleanValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.BooleanValue ? (bool) valueType_ : false; }
       set {
@@ -683,7 +781,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "integer_value" field.</summary>
     public const int IntegerValueFieldNumber = 2;
+    /// <summary>
+    ///  An integer value.
+    /// </summary>
     public long IntegerValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.IntegerValue ? (long) valueType_ : 0L; }
       set {
@@ -692,7 +794,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "double_value" field.</summary>
     public const int DoubleValueFieldNumber = 3;
+    /// <summary>
+    ///  A double value.
+    /// </summary>
     public double DoubleValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.DoubleValue ? (double) valueType_ : 0D; }
       set {
@@ -701,7 +807,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "timestamp_value" field.</summary>
     public const int TimestampValueFieldNumber = 10;
+    /// <summary>
+    ///  A timestamp value.
+    ///  When stored in the Datastore, precise only to microseconds;
+    ///  any additional precision is rounded down.
+    /// </summary>
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimestampValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.TimestampValue ? (global::Google.Protobuf.WellKnownTypes.Timestamp) valueType_ : null; }
       set {
@@ -710,7 +822,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "key_value" field.</summary>
     public const int KeyValueFieldNumber = 5;
+    /// <summary>
+    ///  A key value.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Key KeyValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.KeyValue ? (global::Google.Datastore.V1Beta3.Key) valueType_ : null; }
       set {
@@ -719,7 +835,15 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "string_value" field.</summary>
     public const int StringValueFieldNumber = 17;
+    /// <summary>
+    ///  A UTF-8 encoded string value.
+    ///  When `exclude_from_indexes` is false (it is indexed) and meaning is not
+    ///  2, may have at most 1500 bytes.
+    ///  When meaning is 2, may have at most 2083 bytes.
+    ///  Otherwise, may be set to at least 1,000,000 bytes
+    /// </summary>
     public string StringValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.StringValue ? (string) valueType_ : ""; }
       set {
@@ -728,7 +852,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "blob_value" field.</summary>
     public const int BlobValueFieldNumber = 18;
+    /// <summary>
+    ///  A blob value.
+    ///  May have at most 1,000,000 bytes.
+    ///  When `exclude_from_indexes` is false, may have at most 1500 bytes.
+    /// </summary>
     public pb::ByteString BlobValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.BlobValue ? (pb::ByteString) valueType_ : pb::ByteString.Empty; }
       set {
@@ -737,7 +867,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "geo_point_value" field.</summary>
     public const int GeoPointValueFieldNumber = 8;
+    /// <summary>
+    ///  A geo point value representing a point on the surface of Earth.
+    /// </summary>
     public global::Google.Type.LatLng GeoPointValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.GeoPointValue ? (global::Google.Type.LatLng) valueType_ : null; }
       set {
@@ -746,7 +880,14 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "entity_value" field.</summary>
     public const int EntityValueFieldNumber = 6;
+    /// <summary>
+    ///  An entity value.
+    ///  May have no key.
+    ///  May have a key with an incomplete key path.
+    ///  May have a reserved/read-only key.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Entity EntityValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.EntityValue ? (global::Google.Datastore.V1Beta3.Entity) valueType_ : null; }
       set {
@@ -755,7 +896,14 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "array_value" field.</summary>
     public const int ArrayValueFieldNumber = 9;
+    /// <summary>
+    ///  An array value.
+    ///  Cannot contain another array value.
+    ///  A `Value` instance that sets field `array_value` must not set fields
+    ///  `meaning` or `exclude_from_indexes`.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.ArrayValue ArrayValue {
       get { return valueTypeCase_ == ValueTypeOneofCase.ArrayValue ? (global::Google.Datastore.V1Beta3.ArrayValue) valueType_ : null; }
       set {
@@ -764,8 +912,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "meaning" field.</summary>
     public const int MeaningFieldNumber = 14;
     private int meaning_;
+    /// <summary>
+    ///  The `meaning` field should only be populated for backwards compatibility.
+    /// </summary>
     public int Meaning {
       get { return meaning_; }
       set {
@@ -773,8 +925,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "exclude_from_indexes" field.</summary>
     public const int ExcludeFromIndexesFieldNumber = 19;
     private bool excludeFromIndexes_;
+    /// <summary>
+    ///  If the value should be excluded from all indexes including those defined
+    ///  explicitly.
+    /// </summary>
     public bool ExcludeFromIndexes {
       get { return excludeFromIndexes_; }
       set {
@@ -783,6 +940,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     private object valueType_;
+    /// <summary>Enum of possible cases for the "value_type" oneof.</summary>
     public enum ValueTypeOneofCase {
       None = 0,
       NullValue = 11,
@@ -831,6 +989,7 @@ namespace Google.Datastore.V1Beta3 {
       if (!object.Equals(ArrayValue, other.ArrayValue)) return false;
       if (Meaning != other.Meaning) return false;
       if (ExcludeFromIndexes != other.ExcludeFromIndexes) return false;
+      if (ValueTypeCase != other.ValueTypeCase) return false;
       return true;
     }
 
@@ -849,11 +1008,12 @@ namespace Google.Datastore.V1Beta3 {
       if (valueTypeCase_ == ValueTypeOneofCase.ArrayValue) hash ^= ArrayValue.GetHashCode();
       if (Meaning != 0) hash ^= Meaning.GetHashCode();
       if (ExcludeFromIndexes != false) hash ^= ExcludeFromIndexes.GetHashCode();
+      hash ^= (int) valueTypeCase_;
       return hash;
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1094,13 +1254,20 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  An entity.
+  ///
+  ///  An entity is limited to 1 megabyte when stored. That _roughly_
+  ///  corresponds to a limit of 1 megabyte for the serialized form of this
+  ///  message.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Entity : pb::IMessage<Entity> {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
     public static pb::MessageParser<Entity> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Datastore.V1Beta3.EntityReflection.Descriptor.MessageTypes[4]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1122,8 +1289,17 @@ namespace Google.Datastore.V1Beta3 {
       return new Entity(this);
     }
 
+    /// <summary>Field number for the "key" field.</summary>
     public const int KeyFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.Key key_;
+    /// <summary>
+    ///  The entity's key.
+    ///
+    ///  An entity must have a key, unless otherwise documented (for example,
+    ///  an entity in `Value.entity_value` may have no key).
+    ///  An entity's kind is its key's path's last element's kind,
+    ///  or null if it has no key.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Key Key {
       get { return key_; }
       set {
@@ -1131,10 +1307,19 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 3;
     private static readonly pbc::MapField<string, global::Google.Datastore.V1Beta3.Value>.Codec _map_properties_codec
         = new pbc::MapField<string, global::Google.Datastore.V1Beta3.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.Value.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Datastore.V1Beta3.Value> properties_ = new pbc::MapField<string, global::Google.Datastore.V1Beta3.Value>();
+    /// <summary>
+    ///  The entity's properties.
+    ///  The map's keys are property names.
+    ///  A property name matching regex `__.*__` is reserved.
+    ///  A reserved property name is forbidden in certain documented contexts.
+    ///  The name must not contain more than 500 characters.
+    ///  The name cannot be `""`.
+    /// </summary>
     public pbc::MapField<string, global::Google.Datastore.V1Beta3.Value> Properties {
       get { return properties_; }
     }
@@ -1163,7 +1348,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {

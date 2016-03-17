@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CloudPubsubExample
+namespace DatastoreExample
 {
     class Program
     {
@@ -24,14 +24,11 @@ namespace CloudPubsubExample
             // 2. enable cloud datastore API on that project
             // 3. 'gcloud auth login' to store your google credential in a well known location (from where GoogleCredential.GetApplicationDefaultAsync() can pick it up).
 
-            var googleCredential = GoogleCredential.GetApplicationDefaultAsync().GetAwaiter().GetResult();
+            var credentials = Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
 
-            Channel channel = new Channel("datastore.googleapis.com", new SslCredentials(File.ReadAllText(@"C:\Users\jtattermusch\certs\cacerts\roots.pem")));
+            Channel channel = new Channel("datastore.googleapis.com", credentials.ToChannelCredentials());
 
-            var datastoreClient = new Google.Datastore.V1Beta3.Datastore.DatastoreClient(channel)
-            {
-                HeaderInterceptor = AuthInterceptors.FromCredential(googleCredential)
-            };
+            var datastoreClient = new Google.Datastore.V1Beta3.Datastore.DatastoreClient(channel);
 
             var result = datastoreClient.RunQuery(new RunQueryRequest
             {

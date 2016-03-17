@@ -9,38 +9,47 @@ using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Type {
 
+  /// <summary>Holder for reflection information generated from google/type/latlng.proto</summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public static partial class Latlng {
+  public static partial class LatlngReflection {
 
     #region Descriptor
+    /// <summary>File descriptor for google/type/latlng.proto</summary>
     public static pbr::FileDescriptor Descriptor {
       get { return descriptor; }
     }
     private static pbr::FileDescriptor descriptor;
 
-    static Latlng() {
+    static LatlngReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8SC2dvb2dsZS50eXBlIi0KBkxh", 
-            "dExuZxIQCghsYXRpdHVkZRgBIAEoARIRCglsb25naXR1ZGUYAiABKAFCIwoP", 
+            "Chhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8SC2dvb2dsZS50eXBlIi0KBkxh",
+            "dExuZxIQCghsYXRpdHVkZRgBIAEoARIRCglsb25naXR1ZGUYAiABKAFCIwoP",
             "Y29tLmdvb2dsZS50eXBlQgtMYXRMbmdQcm90b1ABoAEBYgZwcm90bzM="));
-      descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-            new pbr::GeneratedCodeInfo(typeof(global::Google.Type.LatLng), new[]{ "Latitude", "Longitude" }, null, null, null)
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Type.LatLng), global::Google.Type.LatLng.Parser, new[]{ "Latitude", "Longitude" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
+  /// <summary>
+  ///  An object representing a latitude/longitude pair. This is expressed as a pair
+  ///  of doubles representing degrees latitude and degrees longitude. Unless
+  ///  specified otherwise, this must conform to the
+  ///  &lt;a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf">WGS84
+  ///  standard&lt;/a>. Values must be within normalized ranges.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LatLng : pb::IMessage<LatLng> {
     private static readonly pb::MessageParser<LatLng> _parser = new pb::MessageParser<LatLng>(() => new LatLng());
     public static pb::MessageParser<LatLng> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Type.Latlng.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Type.LatlngReflection.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -62,8 +71,12 @@ namespace Google.Type {
       return new LatLng(this);
     }
 
+    /// <summary>Field number for the "latitude" field.</summary>
     public const int LatitudeFieldNumber = 1;
     private double latitude_;
+    /// <summary>
+    ///  The latitude in degrees. It must be in the range [-90.0, +90.0].
+    /// </summary>
     public double Latitude {
       get { return latitude_; }
       set {
@@ -71,8 +84,12 @@ namespace Google.Type {
       }
     }
 
+    /// <summary>Field number for the "longitude" field.</summary>
     public const int LongitudeFieldNumber = 2;
     private double longitude_;
+    /// <summary>
+    ///  The longitude in degrees. It must be in the range [-180.0, +180.0].
+    /// </summary>
     public double Longitude {
       get { return longitude_; }
       set {
@@ -104,7 +121,7 @@ namespace Google.Type {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {

@@ -9,110 +9,112 @@ using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Datastore.V1Beta3 {
 
-  namespace Proto {
+  /// <summary>Holder for reflection information generated from google/datastore/v1beta3/query.proto</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public static partial class QueryReflection {
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public static partial class Query {
-
-      #region Descriptor
-      public static pbr::FileDescriptor Descriptor {
-        get { return descriptor; }
-      }
-      private static pbr::FileDescriptor descriptor;
-
-      static Query() {
-        byte[] descriptorData = global::System.Convert.FromBase64String(
-            string.Concat(
-              "CiRnb29nbGUvZGF0YXN0b3JlL3YxYmV0YTMvcXVlcnkucHJvdG8SGGdvb2ds", 
-              "ZS5kYXRhc3RvcmUudjFiZXRhMxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w", 
-              "cm90bxolZ29vZ2xlL2RhdGFzdG9yZS92MWJldGEzL2VudGl0eS5wcm90bxoe", 
-              "Z29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIqMBCgxFbnRpdHlSZXN1", 
-              "bHQSMAoGZW50aXR5GAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz", 
-              "LkVudGl0eRIOCgZjdXJzb3IYAyABKAwiUQoKUmVzdWx0VHlwZRIbChdSRVNV", 
-              "TFRfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZVTEwQARIOCgpQUk9KRUNUSU9O", 
-              "EAISDAoIS0VZX09OTFkQAyKLAwoFUXVlcnkSOAoKcHJvamVjdGlvbhgCIAMo", 
-              "CzIkLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9qZWN0aW9uEjYKBGtp", 
-              "bmQYAyADKAsyKC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuS2luZEV4cHJl", 
-              "c3Npb24SMAoGZmlsdGVyGAQgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJl", 
-              "dGEzLkZpbHRlchI2CgVvcmRlchgFIAMoCzInLmdvb2dsZS5kYXRhc3RvcmUu", 
-              "djFiZXRhMy5Qcm9wZXJ0eU9yZGVyEkAKC2Rpc3RpbmN0X29uGAYgAygLMisu", 
-              "Z29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb3BlcnR5UmVmZXJlbmNlEhQK", 
-              "DHN0YXJ0X2N1cnNvchgHIAEoDBISCgplbmRfY3Vyc29yGAggASgMEg4KBm9m", 
-              "ZnNldBgKIAEoBRIqCgVsaW1pdBgMIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5J", 
-              "bnQzMlZhbHVlIh4KDktpbmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkiIQoR", 
-              "UHJvcGVydHlSZWZlcmVuY2USDAoEbmFtZRgCIAEoCSJLCgpQcm9qZWN0aW9u", 
-              "Ej0KCHByb3BlcnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz", 
-              "LlByb3BlcnR5UmVmZXJlbmNlItsBCg1Qcm9wZXJ0eU9yZGVyEj0KCHByb3Bl", 
-              "cnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb3BlcnR5", 
-              "UmVmZXJlbmNlEkQKCWRpcmVjdGlvbhgCIAEoDjIxLmdvb2dsZS5kYXRhc3Rv", 
-              "cmUudjFiZXRhMy5Qcm9wZXJ0eU9yZGVyLkRpcmVjdGlvbiJFCglEaXJlY3Rp", 
-              "b24SGQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAES", 
-              "DgoKREVTQ0VORElORxACIqMBCgZGaWx0ZXISRQoQY29tcG9zaXRlX2ZpbHRl", 
-              "chgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Db21wb3NpdGVG", 
-              "aWx0ZXJIABJDCg9wcm9wZXJ0eV9maWx0ZXIYAiABKAsyKC5nb29nbGUuZGF0", 
-              "YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlGaWx0ZXJIAEINCgtmaWx0ZXJfdHlw", 
-              "ZSKzAQoPQ29tcG9zaXRlRmlsdGVyEj4KAm9wGAEgASgOMjIuZ29vZ2xlLmRh", 
-              "dGFzdG9yZS52MWJldGEzLkNvbXBvc2l0ZUZpbHRlci5PcGVyYXRvchIxCgdm", 
-              "aWx0ZXJzGAIgAygLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkZpbHRl", 
-              "ciItCghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEgcKA0FO", 
-              "RBABItYCCg5Qcm9wZXJ0eUZpbHRlchI9Cghwcm9wZXJ0eRgBIAEoCzIrLmdv", 
-              "b2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eVJlZmVyZW5jZRI9CgJv", 
-              "cBgCIAEoDjIxLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eUZp", 
-              "bHRlci5PcGVyYXRvchIuCgV2YWx1ZRgDIAEoCzIfLmdvb2dsZS5kYXRhc3Rv", 
-              "cmUudjFiZXRhMy5WYWx1ZSKVAQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5T", 
-              "UEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFV", 
-              "QUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFV", 
-              "QUwQBBIJCgVFUVVBTBAFEhAKDEhBU19BTkNFU1RPUhALIrQCCghHcWxRdWVy", 
-              "eRIUCgxxdWVyeV9zdHJpbmcYASABKAkSFgoOYWxsb3dfbGl0ZXJhbHMYAiAB", 
-              "KAgSTQoObmFtZWRfYmluZGluZ3MYBSADKAsyNS5nb29nbGUuZGF0YXN0b3Jl", 
-              "LnYxYmV0YTMuR3FsUXVlcnkuTmFtZWRCaW5kaW5nc0VudHJ5EkgKE3Bvc2l0", 
-              "aW9uYWxfYmluZGluZ3MYBCADKAsyKy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0", 
-              "YTMuR3FsUXVlcnlQYXJhbWV0ZXIaYQoSTmFtZWRCaW5kaW5nc0VudHJ5EgsK", 
-              "A2tleRgBIAEoCRI6CgV2YWx1ZRgCIAEoCzIrLmdvb2dsZS5kYXRhc3RvcmUu", 
-              "djFiZXRhMy5HcWxRdWVyeVBhcmFtZXRlcjoCOAEiaQoRR3FsUXVlcnlQYXJh", 
-              "bWV0ZXISMAoFdmFsdWUYAiABKAsyHy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0", 
-              "YTMuVmFsdWVIABIQCgZjdXJzb3IYAyABKAxIAEIQCg5wYXJhbWV0ZXJfdHlw", 
-              "ZSLTAwoQUXVlcnlSZXN1bHRCYXRjaBIXCg9za2lwcGVkX3Jlc3VsdHMYBiAB", 
-              "KAUSFgoOc2tpcHBlZF9jdXJzb3IYAyABKAwSTQoSZW50aXR5X3Jlc3VsdF90", 
-              "eXBlGAEgASgOMjEuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJl", 
-              "c3VsdC5SZXN1bHRUeXBlEj4KDmVudGl0eV9yZXN1bHRzGAIgAygLMiYuZ29v", 
-              "Z2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJlc3VsdBISCgplbmRfY3Vy", 
-              "c29yGAQgASgMElAKDG1vcmVfcmVzdWx0cxgFIAEoDjI6Lmdvb2dsZS5kYXRh", 
-              "c3RvcmUudjFiZXRhMy5RdWVyeVJlc3VsdEJhdGNoLk1vcmVSZXN1bHRzVHlw", 
-              "ZSKYAQoPTW9yZVJlc3VsdHNUeXBlEiEKHU1PUkVfUkVTVUxUU19UWVBFX1VO", 
-              "U1BFQ0lGSUVEEAASEAoMTk9UX0ZJTklTSEVEEAESHAoYTU9SRV9SRVNVTFRT", 
-              "X0FGVEVSX0xJTUlUEAISHQoZTU9SRV9SRVNVTFRTX0FGVEVSX0NVUlNPUhAE", 
-              "EhMKD05PX01PUkVfUkVTVUxUUxADQiwKHGNvbS5nb29nbGUuZGF0YXN0b3Jl", 
-              "LnYxYmV0YTNCClF1ZXJ5UHJvdG9QAWIGcHJvdG8z"));
-        descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-            new pbr::FileDescriptor[] { global::Google.Api.Annotations.Descriptor, global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor, global::Google.Protobuf.WellKnownTypes.Wrappers.Descriptor, },
-            new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.EntityResult), new[]{ "Entity", "Cursor" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.EntityResult.Types.ResultType) }, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Query), new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.KindExpression), new[]{ "Name" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PropertyReference), new[]{ "Name" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Projection), new[]{ "Property" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PropertyOrder), new[]{ "Property", "Direction" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.PropertyOrder.Types.Direction) }, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Filter), new[]{ "CompositeFilter", "PropertyFilter" }, new[]{ "FilterType" }, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CompositeFilter), new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.CompositeFilter.Types.Operator) }, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PropertyFilter), new[]{ "Property", "Op", "Value" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.PropertyFilter.Types.Operator) }, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.GqlQuery), new[]{ "QueryString", "AllowLiterals", "NamedBindings", "PositionalBindings" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.GqlQueryParameter), new[]{ "Value", "Cursor" }, new[]{ "ParameterType" }, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.QueryResultBatch), new[]{ "SkippedResults", "SkippedCursor", "EntityResultType", "EntityResults", "EndCursor", "MoreResults" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType) }, null)
-            }));
-      }
-      #endregion
-
+    #region Descriptor
+    /// <summary>File descriptor for google/datastore/v1beta3/query.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
     }
+    private static pbr::FileDescriptor descriptor;
+
+    static QueryReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "CiRnb29nbGUvZGF0YXN0b3JlL3YxYmV0YTMvcXVlcnkucHJvdG8SGGdvb2ds",
+            "ZS5kYXRhc3RvcmUudjFiZXRhMxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "cm90bxolZ29vZ2xlL2RhdGFzdG9yZS92MWJldGEzL2VudGl0eS5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvIqMBCgxFbnRpdHlSZXN1",
+            "bHQSMAoGZW50aXR5GAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz",
+            "LkVudGl0eRIOCgZjdXJzb3IYAyABKAwiUQoKUmVzdWx0VHlwZRIbChdSRVNV",
+            "TFRfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZVTEwQARIOCgpQUk9KRUNUSU9O",
+            "EAISDAoIS0VZX09OTFkQAyKLAwoFUXVlcnkSOAoKcHJvamVjdGlvbhgCIAMo",
+            "CzIkLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9qZWN0aW9uEjYKBGtp",
+            "bmQYAyADKAsyKC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuS2luZEV4cHJl",
+            "c3Npb24SMAoGZmlsdGVyGAQgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJl",
+            "dGEzLkZpbHRlchI2CgVvcmRlchgFIAMoCzInLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djFiZXRhMy5Qcm9wZXJ0eU9yZGVyEkAKC2Rpc3RpbmN0X29uGAYgAygLMisu",
+            "Z29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb3BlcnR5UmVmZXJlbmNlEhQK",
+            "DHN0YXJ0X2N1cnNvchgHIAEoDBISCgplbmRfY3Vyc29yGAggASgMEg4KBm9m",
+            "ZnNldBgKIAEoBRIqCgVsaW1pdBgMIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5J",
+            "bnQzMlZhbHVlIh4KDktpbmRFeHByZXNzaW9uEgwKBG5hbWUYASABKAkiIQoR",
+            "UHJvcGVydHlSZWZlcmVuY2USDAoEbmFtZRgCIAEoCSJLCgpQcm9qZWN0aW9u",
+            "Ej0KCHByb3BlcnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz",
+            "LlByb3BlcnR5UmVmZXJlbmNlItsBCg1Qcm9wZXJ0eU9yZGVyEj0KCHByb3Bl",
+            "cnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb3BlcnR5",
+            "UmVmZXJlbmNlEkQKCWRpcmVjdGlvbhgCIAEoDjIxLmdvb2dsZS5kYXRhc3Rv",
+            "cmUudjFiZXRhMy5Qcm9wZXJ0eU9yZGVyLkRpcmVjdGlvbiJFCglEaXJlY3Rp",
+            "b24SGQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAES",
+            "DgoKREVTQ0VORElORxACIqMBCgZGaWx0ZXISRQoQY29tcG9zaXRlX2ZpbHRl",
+            "chgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Db21wb3NpdGVG",
+            "aWx0ZXJIABJDCg9wcm9wZXJ0eV9maWx0ZXIYAiABKAsyKC5nb29nbGUuZGF0",
+            "YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlGaWx0ZXJIAEINCgtmaWx0ZXJfdHlw",
+            "ZSKzAQoPQ29tcG9zaXRlRmlsdGVyEj4KAm9wGAEgASgOMjIuZ29vZ2xlLmRh",
+            "dGFzdG9yZS52MWJldGEzLkNvbXBvc2l0ZUZpbHRlci5PcGVyYXRvchIxCgdm",
+            "aWx0ZXJzGAIgAygLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkZpbHRl",
+            "ciItCghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEgcKA0FO",
+            "RBABItYCCg5Qcm9wZXJ0eUZpbHRlchI9Cghwcm9wZXJ0eRgBIAEoCzIrLmdv",
+            "b2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eVJlZmVyZW5jZRI9CgJv",
+            "cBgCIAEoDjIxLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eUZp",
+            "bHRlci5PcGVyYXRvchIuCgV2YWx1ZRgDIAEoCzIfLmdvb2dsZS5kYXRhc3Rv",
+            "cmUudjFiZXRhMy5WYWx1ZSKVAQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5T",
+            "UEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFV",
+            "QUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFV",
+            "QUwQBBIJCgVFUVVBTBAFEhAKDEhBU19BTkNFU1RPUhALIrQCCghHcWxRdWVy",
+            "eRIUCgxxdWVyeV9zdHJpbmcYASABKAkSFgoOYWxsb3dfbGl0ZXJhbHMYAiAB",
+            "KAgSTQoObmFtZWRfYmluZGluZ3MYBSADKAsyNS5nb29nbGUuZGF0YXN0b3Jl",
+            "LnYxYmV0YTMuR3FsUXVlcnkuTmFtZWRCaW5kaW5nc0VudHJ5EkgKE3Bvc2l0",
+            "aW9uYWxfYmluZGluZ3MYBCADKAsyKy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0",
+            "YTMuR3FsUXVlcnlQYXJhbWV0ZXIaYQoSTmFtZWRCaW5kaW5nc0VudHJ5EgsK",
+            "A2tleRgBIAEoCRI6CgV2YWx1ZRgCIAEoCzIrLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djFiZXRhMy5HcWxRdWVyeVBhcmFtZXRlcjoCOAEiaQoRR3FsUXVlcnlQYXJh",
+            "bWV0ZXISMAoFdmFsdWUYAiABKAsyHy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0",
+            "YTMuVmFsdWVIABIQCgZjdXJzb3IYAyABKAxIAEIQCg5wYXJhbWV0ZXJfdHlw",
+            "ZSLTAwoQUXVlcnlSZXN1bHRCYXRjaBIXCg9za2lwcGVkX3Jlc3VsdHMYBiAB",
+            "KAUSFgoOc2tpcHBlZF9jdXJzb3IYAyABKAwSTQoSZW50aXR5X3Jlc3VsdF90",
+            "eXBlGAEgASgOMjEuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJl",
+            "c3VsdC5SZXN1bHRUeXBlEj4KDmVudGl0eV9yZXN1bHRzGAIgAygLMiYuZ29v",
+            "Z2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJlc3VsdBISCgplbmRfY3Vy",
+            "c29yGAQgASgMElAKDG1vcmVfcmVzdWx0cxgFIAEoDjI6Lmdvb2dsZS5kYXRh",
+            "c3RvcmUudjFiZXRhMy5RdWVyeVJlc3VsdEJhdGNoLk1vcmVSZXN1bHRzVHlw",
+            "ZSKYAQoPTW9yZVJlc3VsdHNUeXBlEiEKHU1PUkVfUkVTVUxUU19UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASEAoMTk9UX0ZJTklTSEVEEAESHAoYTU9SRV9SRVNVTFRT",
+            "X0FGVEVSX0xJTUlUEAISHQoZTU9SRV9SRVNVTFRTX0FGVEVSX0NVUlNPUhAE",
+            "EhMKD05PX01PUkVfUkVTVUxUUxADQiwKHGNvbS5nb29nbGUuZGF0YXN0b3Jl",
+            "LnYxYmV0YTNCClF1ZXJ5UHJvdG9QAWIGcHJvdG8z"));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Datastore.V1Beta3.EntityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.EntityResult), global::Google.Datastore.V1Beta3.EntityResult.Parser, new[]{ "Entity", "Cursor" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.EntityResult.Types.ResultType) }, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Query), global::Google.Datastore.V1Beta3.Query.Parser, new[]{ "Projection", "Kind", "Filter", "Order", "DistinctOn", "StartCursor", "EndCursor", "Offset", "Limit" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.KindExpression), global::Google.Datastore.V1Beta3.KindExpression.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PropertyReference), global::Google.Datastore.V1Beta3.PropertyReference.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Projection), global::Google.Datastore.V1Beta3.Projection.Parser, new[]{ "Property" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PropertyOrder), global::Google.Datastore.V1Beta3.PropertyOrder.Parser, new[]{ "Property", "Direction" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.PropertyOrder.Types.Direction) }, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Filter), global::Google.Datastore.V1Beta3.Filter.Parser, new[]{ "CompositeFilter", "PropertyFilter" }, new[]{ "FilterType" }, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CompositeFilter), global::Google.Datastore.V1Beta3.CompositeFilter.Parser, new[]{ "Op", "Filters" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.CompositeFilter.Types.Operator) }, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.PropertyFilter), global::Google.Datastore.V1Beta3.PropertyFilter.Parser, new[]{ "Property", "Op", "Value" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.PropertyFilter.Types.Operator) }, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.GqlQuery), global::Google.Datastore.V1Beta3.GqlQuery.Parser, new[]{ "QueryString", "AllowLiterals", "NamedBindings", "PositionalBindings" }, null, null, new pbr::GeneratedCodeInfo[] { null, }),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.GqlQueryParameter), global::Google.Datastore.V1Beta3.GqlQueryParameter.Parser, new[]{ "Value", "Cursor" }, new[]{ "ParameterType" }, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.QueryResultBatch), global::Google.Datastore.V1Beta3.QueryResultBatch.Parser, new[]{ "SkippedResults", "SkippedCursor", "EntityResultType", "EntityResults", "EndCursor", "MoreResults" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType) }, null)
+          }));
+    }
+    #endregion
+
   }
   #region Messages
+  /// <summary>
+  ///  The result of fetching an entity from the datastore.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class EntityResult : pb::IMessage<EntityResult> {
     private static readonly pb::MessageParser<EntityResult> _parser = new pb::MessageParser<EntityResult>(() => new EntityResult());
     public static pb::MessageParser<EntityResult> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -134,8 +136,12 @@ namespace Google.Datastore.V1Beta3 {
       return new EntityResult(this);
     }
 
+    /// <summary>Field number for the "entity" field.</summary>
     public const int EntityFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.Entity entity_;
+    /// <summary>
+    ///  The resulting entity.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Entity Entity {
       get { return entity_; }
       set {
@@ -143,8 +149,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "cursor" field.</summary>
     public const int CursorFieldNumber = 3;
     private pb::ByteString cursor_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  A cursor that points to the position after the result entity.
+    ///  Set only when the `EntityResult` is part of a `QueryResultBatch` message.
+    /// </summary>
     public pb::ByteString Cursor {
       get { return cursor_; }
       set {
@@ -176,7 +187,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -239,12 +250,33 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the EntityResult message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  Specifies what data the 'entity' field contains.
+      ///  A `ResultType` is either implied (for example, in `LookupResponse.found`
+      ///  from `datastore.proto`, it is always `FULL`) or specified by context (for
+      ///  example, in message `QueryResultBatch`, field `entity_result_type`
+      ///  specifies a `ResultType` for all the values in field `entity_results`).
+      /// </summary>
       public enum ResultType {
+        /// <summary>
+        ///  Unspecified.
+        /// </summary>
         RESULT_TYPE_UNSPECIFIED = 0,
+        /// <summary>
+        ///  The entire entity.
+        /// </summary>
         FULL = 1,
+        /// <summary>
+        ///  A projected subset of properties. The entity may have no key. A property
+        ///  value may have meaning 18.
+        /// </summary>
         PROJECTION = 2,
+        /// <summary>
+        ///  Only the key.
+        /// </summary>
         KEY_ONLY = 3,
       }
 
@@ -253,13 +285,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A query.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Query : pb::IMessage<Query> {
     private static readonly pb::MessageParser<Query> _parser = new pb::MessageParser<Query>(() => new Query());
     public static pb::MessageParser<Query> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[1]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -288,24 +323,37 @@ namespace Google.Datastore.V1Beta3 {
       return new Query(this);
     }
 
+    /// <summary>Field number for the "projection" field.</summary>
     public const int ProjectionFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Projection> _repeated_projection_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.Projection.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Projection> projection_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Projection>();
+    /// <summary>
+    ///  The projection to return. Defaults to returning all properties.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Projection> Projection {
       get { return projection_; }
     }
 
+    /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.KindExpression> _repeated_kind_codec
         = pb::FieldCodec.ForMessage(26, global::Google.Datastore.V1Beta3.KindExpression.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.KindExpression> kind_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.KindExpression>();
+    /// <summary>
+    ///  The kinds to query (if empty, returns entities of all kinds).
+    ///  Currently at most 1 kind may be specified.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.KindExpression> Kind {
       get { return kind_; }
     }
 
+    /// <summary>Field number for the "filter" field.</summary>
     public const int FilterFieldNumber = 4;
     private global::Google.Datastore.V1Beta3.Filter filter_;
+    /// <summary>
+    ///  The filter to apply.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Filter Filter {
       get { return filter_; }
       set {
@@ -313,24 +361,39 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "order" field.</summary>
     public const int OrderFieldNumber = 5;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.PropertyOrder> _repeated_order_codec
         = pb::FieldCodec.ForMessage(42, global::Google.Datastore.V1Beta3.PropertyOrder.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.PropertyOrder> order_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.PropertyOrder>();
+    /// <summary>
+    ///  The order to apply to the query results (if empty, order is unspecified).
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.PropertyOrder> Order {
       get { return order_; }
     }
 
+    /// <summary>Field number for the "distinct_on" field.</summary>
     public const int DistinctOnFieldNumber = 6;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.PropertyReference> _repeated_distinctOn_codec
         = pb::FieldCodec.ForMessage(50, global::Google.Datastore.V1Beta3.PropertyReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.PropertyReference> distinctOn_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.PropertyReference>();
+    /// <summary>
+    ///  The properties to make distinct. The query results will contain the first
+    ///  result for each distinct combination of values for the given properties
+    ///  (if empty, all results are returned).
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.PropertyReference> DistinctOn {
       get { return distinctOn_; }
     }
 
+    /// <summary>Field number for the "start_cursor" field.</summary>
     public const int StartCursorFieldNumber = 7;
     private pb::ByteString startCursor_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  A starting point for the query results. Query cursors are
+    ///  returned in query result batches.
+    /// </summary>
     public pb::ByteString StartCursor {
       get { return startCursor_; }
       set {
@@ -338,8 +401,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "end_cursor" field.</summary>
     public const int EndCursorFieldNumber = 8;
     private pb::ByteString endCursor_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  An ending point for the query results. Query cursors are
+    ///  returned in query result batches.
+    /// </summary>
     public pb::ByteString EndCursor {
       get { return endCursor_; }
       set {
@@ -347,8 +415,14 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "offset" field.</summary>
     public const int OffsetFieldNumber = 10;
     private int offset_;
+    /// <summary>
+    ///  The number of results to skip. Applies before limit, but after all other
+    ///  constraints.
+    ///  Must be >= 0.
+    /// </summary>
     public int Offset {
       get { return offset_; }
       set {
@@ -356,9 +430,16 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "limit" field.</summary>
     public const int LimitFieldNumber = 12;
     private static readonly pb::FieldCodec<int?> _single_limit_codec = pb::FieldCodec.ForStructWrapper<int>(98);
     private int? limit_;
+    /// <summary>
+    ///  The maximum number of results to return. Applies after all other
+    ///  constraints.
+    ///  Unspecified is interpreted as no limit.
+    ///  Must be >= 0.
+    /// </summary>
     public int? Limit {
       get { return limit_; }
       set {
@@ -404,7 +485,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -542,13 +623,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A representation of a kind.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class KindExpression : pb::IMessage<KindExpression> {
     private static readonly pb::MessageParser<KindExpression> _parser = new pb::MessageParser<KindExpression>(() => new KindExpression());
     public static pb::MessageParser<KindExpression> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[2]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -569,8 +653,12 @@ namespace Google.Datastore.V1Beta3 {
       return new KindExpression(this);
     }
 
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
+    /// <summary>
+    ///  The name of the kind.
+    /// </summary>
     public string Name {
       get { return name_; }
       set {
@@ -600,7 +688,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -644,13 +732,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A reference to a property relative to the kind expressions.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PropertyReference : pb::IMessage<PropertyReference> {
     private static readonly pb::MessageParser<PropertyReference> _parser = new pb::MessageParser<PropertyReference>(() => new PropertyReference());
     public static pb::MessageParser<PropertyReference> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[3]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -671,8 +762,12 @@ namespace Google.Datastore.V1Beta3 {
       return new PropertyReference(this);
     }
 
+    /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
     private string name_ = "";
+    /// <summary>
+    ///  The name of the property.
+    /// </summary>
     public string Name {
       get { return name_; }
       set {
@@ -702,7 +797,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -746,13 +841,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A representation of a property in a projection.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Projection : pb::IMessage<Projection> {
     private static readonly pb::MessageParser<Projection> _parser = new pb::MessageParser<Projection>(() => new Projection());
     public static pb::MessageParser<Projection> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[4]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -773,8 +871,12 @@ namespace Google.Datastore.V1Beta3 {
       return new Projection(this);
     }
 
+    /// <summary>Field number for the "property" field.</summary>
     public const int PropertyFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.PropertyReference property_;
+    /// <summary>
+    ///  The property to project.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PropertyReference Property {
       get { return property_; }
       set {
@@ -804,7 +906,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -854,13 +956,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The desired order for a specific property.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PropertyOrder : pb::IMessage<PropertyOrder> {
     private static readonly pb::MessageParser<PropertyOrder> _parser = new pb::MessageParser<PropertyOrder>(() => new PropertyOrder());
     public static pb::MessageParser<PropertyOrder> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[5]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -882,8 +987,12 @@ namespace Google.Datastore.V1Beta3 {
       return new PropertyOrder(this);
     }
 
+    /// <summary>Field number for the "property" field.</summary>
     public const int PropertyFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.PropertyReference property_;
+    /// <summary>
+    ///  The property to order by.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PropertyReference Property {
       get { return property_; }
       set {
@@ -891,8 +1000,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "direction" field.</summary>
     public const int DirectionFieldNumber = 2;
     private global::Google.Datastore.V1Beta3.PropertyOrder.Types.Direction direction_ = global::Google.Datastore.V1Beta3.PropertyOrder.Types.Direction.DIRECTION_UNSPECIFIED;
+    /// <summary>
+    ///  The direction to order by. Defaults to `ASCENDING`.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PropertyOrder.Types.Direction Direction {
       get { return direction_; }
       set {
@@ -924,7 +1037,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -987,11 +1100,24 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the PropertyOrder message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  Direction.
+      /// </summary>
       public enum Direction {
+        /// <summary>
+        ///  Unspecified.
+        /// </summary>
         DIRECTION_UNSPECIFIED = 0,
+        /// <summary>
+        ///  Ascending.
+        /// </summary>
         ASCENDING = 1,
+        /// <summary>
+        ///  Descending.
+        /// </summary>
         DESCENDING = 2,
       }
 
@@ -1000,13 +1126,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A holder for any type of filter.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Filter : pb::IMessage<Filter> {
     private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
     public static pb::MessageParser<Filter> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[6]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1035,7 +1164,11 @@ namespace Google.Datastore.V1Beta3 {
       return new Filter(this);
     }
 
+    /// <summary>Field number for the "composite_filter" field.</summary>
     public const int CompositeFilterFieldNumber = 1;
+    /// <summary>
+    ///  A composite filter.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.CompositeFilter CompositeFilter {
       get { return filterTypeCase_ == FilterTypeOneofCase.CompositeFilter ? (global::Google.Datastore.V1Beta3.CompositeFilter) filterType_ : null; }
       set {
@@ -1044,7 +1177,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "property_filter" field.</summary>
     public const int PropertyFilterFieldNumber = 2;
+    /// <summary>
+    ///  A filter on a property.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PropertyFilter PropertyFilter {
       get { return filterTypeCase_ == FilterTypeOneofCase.PropertyFilter ? (global::Google.Datastore.V1Beta3.PropertyFilter) filterType_ : null; }
       set {
@@ -1054,6 +1191,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     private object filterType_;
+    /// <summary>Enum of possible cases for the "filter_type" oneof.</summary>
     public enum FilterTypeOneofCase {
       None = 0,
       CompositeFilter = 1,
@@ -1082,6 +1220,7 @@ namespace Google.Datastore.V1Beta3 {
       }
       if (!object.Equals(CompositeFilter, other.CompositeFilter)) return false;
       if (!object.Equals(PropertyFilter, other.PropertyFilter)) return false;
+      if (FilterTypeCase != other.FilterTypeCase) return false;
       return true;
     }
 
@@ -1089,11 +1228,12 @@ namespace Google.Datastore.V1Beta3 {
       int hash = 1;
       if (filterTypeCase_ == FilterTypeOneofCase.CompositeFilter) hash ^= CompositeFilter.GetHashCode();
       if (filterTypeCase_ == FilterTypeOneofCase.PropertyFilter) hash ^= PropertyFilter.GetHashCode();
+      hash ^= (int) filterTypeCase_;
       return hash;
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1164,13 +1304,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A filter that merges the multiple other filters using the given operator.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class CompositeFilter : pb::IMessage<CompositeFilter> {
     private static readonly pb::MessageParser<CompositeFilter> _parser = new pb::MessageParser<CompositeFilter>(() => new CompositeFilter());
     public static pb::MessageParser<CompositeFilter> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[7]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1192,8 +1335,12 @@ namespace Google.Datastore.V1Beta3 {
       return new CompositeFilter(this);
     }
 
+    /// <summary>Field number for the "op" field.</summary>
     public const int OpFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.CompositeFilter.Types.Operator op_ = global::Google.Datastore.V1Beta3.CompositeFilter.Types.Operator.OPERATOR_UNSPECIFIED;
+    /// <summary>
+    ///  The operator for combining multiple filters.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.CompositeFilter.Types.Operator Op {
       get { return op_; }
       set {
@@ -1201,10 +1348,15 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "filters" field.</summary>
     public const int FiltersFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Filter> _repeated_filters_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.Filter.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Filter> filters_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Filter>();
+    /// <summary>
+    ///  The list of filters to combine.
+    ///  Must contain at least one filter.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Filter> Filters {
       get { return filters_; }
     }
@@ -1233,7 +1385,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1283,10 +1435,20 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the CompositeFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  Composite filter operator.
+      /// </summary>
       public enum Operator {
+        /// <summary>
+        ///  Unspecified. This value must not be used.
+        /// </summary>
         OPERATOR_UNSPECIFIED = 0,
+        /// <summary>
+        ///  And.
+        /// </summary>
         AND = 1,
       }
 
@@ -1295,13 +1457,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A filter on a specific property.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class PropertyFilter : pb::IMessage<PropertyFilter> {
     private static readonly pb::MessageParser<PropertyFilter> _parser = new pb::MessageParser<PropertyFilter>(() => new PropertyFilter());
     public static pb::MessageParser<PropertyFilter> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[8]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1324,8 +1489,12 @@ namespace Google.Datastore.V1Beta3 {
       return new PropertyFilter(this);
     }
 
+    /// <summary>Field number for the "property" field.</summary>
     public const int PropertyFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.PropertyReference property_;
+    /// <summary>
+    ///  The property to filter by.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PropertyReference Property {
       get { return property_; }
       set {
@@ -1333,8 +1502,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "op" field.</summary>
     public const int OpFieldNumber = 2;
     private global::Google.Datastore.V1Beta3.PropertyFilter.Types.Operator op_ = global::Google.Datastore.V1Beta3.PropertyFilter.Types.Operator.OPERATOR_UNSPECIFIED;
+    /// <summary>
+    ///  The operator to filter by.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PropertyFilter.Types.Operator Op {
       get { return op_; }
       set {
@@ -1342,8 +1515,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 3;
     private global::Google.Datastore.V1Beta3.Value value_;
+    /// <summary>
+    ///  The value to compare the property to.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Value Value {
       get { return value_; }
       set {
@@ -1377,7 +1554,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1460,15 +1637,40 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the PropertyFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  Property filter operator.
+      /// </summary>
       public enum Operator {
+        /// <summary>
+        ///  Unspecified. This value must not be used.
+        /// </summary>
         OPERATOR_UNSPECIFIED = 0,
+        /// <summary>
+        ///  Less than.
+        /// </summary>
         LESS_THAN = 1,
+        /// <summary>
+        ///  Less than or equal.
+        /// </summary>
         LESS_THAN_OR_EQUAL = 2,
+        /// <summary>
+        ///  Greater than.
+        /// </summary>
         GREATER_THAN = 3,
+        /// <summary>
+        ///  Greater than or equal.
+        /// </summary>
         GREATER_THAN_OR_EQUAL = 4,
+        /// <summary>
+        ///  Equal.
+        /// </summary>
         EQUAL = 5,
+        /// <summary>
+        ///  Has ancestor.
+        /// </summary>
         HAS_ANCESTOR = 11,
       }
 
@@ -1477,13 +1679,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A GQL query.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GqlQuery : pb::IMessage<GqlQuery> {
     private static readonly pb::MessageParser<GqlQuery> _parser = new pb::MessageParser<GqlQuery>(() => new GqlQuery());
     public static pb::MessageParser<GqlQuery> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[9]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1507,8 +1712,13 @@ namespace Google.Datastore.V1Beta3 {
       return new GqlQuery(this);
     }
 
+    /// <summary>Field number for the "query_string" field.</summary>
     public const int QueryStringFieldNumber = 1;
     private string queryString_ = "";
+    /// <summary>
+    ///  A string of the format described
+    ///  [here](https://developers.google.com/datastore/docs/concepts/gql).
+    /// </summary>
     public string QueryString {
       get { return queryString_; }
       set {
@@ -1516,8 +1726,15 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "allow_literals" field.</summary>
     public const int AllowLiteralsFieldNumber = 2;
     private bool allowLiterals_;
+    /// <summary>
+    ///  When false, the query string must not contain any literals and instead
+    ///  must bind all values. For example,
+    ///  `SELECT * FROM Kind WHERE a = 'string literal'` is not allowed, while
+    ///  `SELECT * FROM Kind WHERE a = @value` is.
+    /// </summary>
     public bool AllowLiterals {
       get { return allowLiterals_; }
       set {
@@ -1525,18 +1742,34 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "named_bindings" field.</summary>
     public const int NamedBindingsFieldNumber = 5;
     private static readonly pbc::MapField<string, global::Google.Datastore.V1Beta3.GqlQueryParameter>.Codec _map_namedBindings_codec
         = new pbc::MapField<string, global::Google.Datastore.V1Beta3.GqlQueryParameter>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.GqlQueryParameter.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Datastore.V1Beta3.GqlQueryParameter> namedBindings_ = new pbc::MapField<string, global::Google.Datastore.V1Beta3.GqlQueryParameter>();
+    /// <summary>
+    ///  For each non-reserved named binding site in the query string,
+    ///  there must be a named parameter with that name,
+    ///  but not necessarily the inverse.
+    ///  Key must match regex `[A-Za-z_$][A-Za-z_$0-9]*`, must not match regex
+    ///  `__.*__`, and must not be `""`.
+    /// </summary>
     public pbc::MapField<string, global::Google.Datastore.V1Beta3.GqlQueryParameter> NamedBindings {
       get { return namedBindings_; }
     }
 
+    /// <summary>Field number for the "positional_bindings" field.</summary>
     public const int PositionalBindingsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.GqlQueryParameter> _repeated_positionalBindings_codec
         = pb::FieldCodec.ForMessage(34, global::Google.Datastore.V1Beta3.GqlQueryParameter.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.GqlQueryParameter> positionalBindings_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.GqlQueryParameter>();
+    /// <summary>
+    ///  Numbered binding site @1 references the first numbered parameter,
+    ///  effectively using 1-based indexing, rather than the usual 0.
+    ///  For each binding site numbered i in `query_string`,
+    ///  there must be an i-th numbered parameter.
+    ///  The inverse must also be true.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.GqlQueryParameter> PositionalBindings {
       get { return positionalBindings_; }
     }
@@ -1569,7 +1802,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1641,13 +1874,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A binding parameter for a GQL query.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class GqlQueryParameter : pb::IMessage<GqlQueryParameter> {
     private static readonly pb::MessageParser<GqlQueryParameter> _parser = new pb::MessageParser<GqlQueryParameter>(() => new GqlQueryParameter());
     public static pb::MessageParser<GqlQueryParameter> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[10]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1676,7 +1912,11 @@ namespace Google.Datastore.V1Beta3 {
       return new GqlQueryParameter(this);
     }
 
+    /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
+    /// <summary>
+    ///  Value.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Value Value {
       get { return parameterTypeCase_ == ParameterTypeOneofCase.Value ? (global::Google.Datastore.V1Beta3.Value) parameterType_ : null; }
       set {
@@ -1685,7 +1925,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "cursor" field.</summary>
     public const int CursorFieldNumber = 3;
+    /// <summary>
+    ///  Cursor.
+    /// </summary>
     public pb::ByteString Cursor {
       get { return parameterTypeCase_ == ParameterTypeOneofCase.Cursor ? (pb::ByteString) parameterType_ : pb::ByteString.Empty; }
       set {
@@ -1695,6 +1939,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     private object parameterType_;
+    /// <summary>Enum of possible cases for the "parameter_type" oneof.</summary>
     public enum ParameterTypeOneofCase {
       None = 0,
       Value = 2,
@@ -1723,6 +1968,7 @@ namespace Google.Datastore.V1Beta3 {
       }
       if (!object.Equals(Value, other.Value)) return false;
       if (Cursor != other.Cursor) return false;
+      if (ParameterTypeCase != other.ParameterTypeCase) return false;
       return true;
     }
 
@@ -1730,11 +1976,12 @@ namespace Google.Datastore.V1Beta3 {
       int hash = 1;
       if (parameterTypeCase_ == ParameterTypeOneofCase.Value) hash ^= Value.GetHashCode();
       if (parameterTypeCase_ == ParameterTypeOneofCase.Cursor) hash ^= Cursor.GetHashCode();
+      hash ^= (int) parameterTypeCase_;
       return hash;
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1800,13 +2047,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A batch of results produced by a query.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class QueryResultBatch : pb::IMessage<QueryResultBatch> {
     private static readonly pb::MessageParser<QueryResultBatch> _parser = new pb::MessageParser<QueryResultBatch>(() => new QueryResultBatch());
     public static pb::MessageParser<QueryResultBatch> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Query.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Datastore.V1Beta3.QueryReflection.Descriptor.MessageTypes[11]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1832,8 +2082,12 @@ namespace Google.Datastore.V1Beta3 {
       return new QueryResultBatch(this);
     }
 
+    /// <summary>Field number for the "skipped_results" field.</summary>
     public const int SkippedResultsFieldNumber = 6;
     private int skippedResults_;
+    /// <summary>
+    ///  The number of results skipped, typically because of an offset.
+    /// </summary>
     public int SkippedResults {
       get { return skippedResults_; }
       set {
@@ -1841,8 +2095,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "skipped_cursor" field.</summary>
     public const int SkippedCursorFieldNumber = 3;
     private pb::ByteString skippedCursor_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  A cursor that points to the position after the last skipped result.
+    ///  Will be set when `skipped_results` != 0.
+    /// </summary>
     public pb::ByteString SkippedCursor {
       get { return skippedCursor_; }
       set {
@@ -1850,8 +2109,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "entity_result_type" field.</summary>
     public const int EntityResultTypeFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.EntityResult.Types.ResultType entityResultType_ = global::Google.Datastore.V1Beta3.EntityResult.Types.ResultType.RESULT_TYPE_UNSPECIFIED;
+    /// <summary>
+    ///  The result type for every entity in `entity_results`.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.EntityResult.Types.ResultType EntityResultType {
       get { return entityResultType_; }
       set {
@@ -1859,16 +2122,24 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "entity_results" field.</summary>
     public const int EntityResultsFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.EntityResult> _repeated_entityResults_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.EntityResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult> entityResults_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult>();
+    /// <summary>
+    ///  The results for this batch.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult> EntityResults {
       get { return entityResults_; }
     }
 
+    /// <summary>Field number for the "end_cursor" field.</summary>
     public const int EndCursorFieldNumber = 4;
     private pb::ByteString endCursor_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  A cursor that points to the position after the last result in the batch.
+    /// </summary>
     public pb::ByteString EndCursor {
       get { return endCursor_; }
       set {
@@ -1876,8 +2147,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "more_results" field.</summary>
     public const int MoreResultsFieldNumber = 5;
     private global::Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType moreResults_ = global::Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType.MORE_RESULTS_TYPE_UNSPECIFIED;
+    /// <summary>
+    ///  The state of the query after the current batch.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.QueryResultBatch.Types.MoreResultsType MoreResults {
       get { return moreResults_; }
       set {
@@ -1917,7 +2192,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2023,13 +2298,32 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the QueryResultBatch message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  The possible values for the `more_results` field.
+      /// </summary>
       public enum MoreResultsType {
+        /// <summary>
+        ///  Unspecified. This value is never used.
+        /// </summary>
         MORE_RESULTS_TYPE_UNSPECIFIED = 0,
+        /// <summary>
+        ///  There are additional batches to fetch from this query.
+        /// </summary>
         NOT_FINISHED = 1,
+        /// <summary>
+        ///  The query is finished, but there may be more results after the limit.
+        /// </summary>
         MORE_RESULTS_AFTER_LIMIT = 2,
+        /// <summary>
+        ///  The query is finished, but there may be more results after the end cursor.
+        /// </summary>
         MORE_RESULTS_AFTER_CURSOR = 4,
+        /// <summary>
+        ///  The query has been exhausted.
+        /// </summary>
         NO_MORE_RESULTS = 3,
       }
 

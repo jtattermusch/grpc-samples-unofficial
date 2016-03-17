@@ -9,122 +9,124 @@ using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Google.Datastore.V1Beta3 {
 
-  namespace Proto {
+  /// <summary>Holder for reflection information generated from google/datastore/v1beta3/datastore.proto</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public static partial class DatastoreReflection {
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public static partial class Datastore {
-
-      #region Descriptor
-      public static pbr::FileDescriptor Descriptor {
-        get { return descriptor; }
-      }
-      private static pbr::FileDescriptor descriptor;
-
-      static Datastore() {
-        byte[] descriptorData = global::System.Convert.FromBase64String(
-            string.Concat(
-              "Cihnb29nbGUvZGF0YXN0b3JlL3YxYmV0YTMvZGF0YXN0b3JlLnByb3RvEhhn", 
-              "b29nbGUuZGF0YXN0b3JlLnYxYmV0YTMaHGdvb2dsZS9hcGkvYW5ub3RhdGlv", 
-              "bnMucHJvdG8aJWdvb2dsZS9kYXRhc3RvcmUvdjFiZXRhMy9lbnRpdHkucHJv", 
-              "dG8aJGdvb2dsZS9kYXRhc3RvcmUvdjFiZXRhMy9xdWVyeS5wcm90byKNAQoN", 
-              "TG9va3VwUmVxdWVzdBISCgpwcm9qZWN0X2lkGAggASgJEjsKDHJlYWRfb3B0", 
-              "aW9ucxgBIAEoCzIlLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5SZWFkT3B0", 
-              "aW9ucxIrCgRrZXlzGAMgAygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz", 
-              "LktleSKxAQoOTG9va3VwUmVzcG9uc2USNQoFZm91bmQYASADKAsyJi5nb29n", 
-              "bGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5UmVzdWx0EjcKB21pc3NpbmcY", 
-              "AiADKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5UmVzdWx0", 
-              "Ei8KCGRlZmVycmVkGAMgAygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz", 
-              "LktleSKYAgoPUnVuUXVlcnlSZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkS", 
-              "OwoMcGFydGl0aW9uX2lkGAIgASgLMiUuZ29vZ2xlLmRhdGFzdG9yZS52MWJl", 
-              "dGEzLlBhcnRpdGlvbklkEjsKDHJlYWRfb3B0aW9ucxgBIAEoCzIlLmdvb2ds", 
-              "ZS5kYXRhc3RvcmUudjFiZXRhMy5SZWFkT3B0aW9ucxIwCgVxdWVyeRgDIAEo", 
-              "CzIfLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5RdWVyeUgAEjcKCWdxbF9x", 
-              "dWVyeRgHIAEoCzIiLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5HcWxRdWVy", 
-              "eUgAQgwKCnF1ZXJ5X3R5cGUifQoQUnVuUXVlcnlSZXNwb25zZRI5CgViYXRj", 
-              "aBgBIAEoCzIqLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5RdWVyeVJlc3Vs", 
-              "dEJhdGNoEi4KBXF1ZXJ5GAIgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MWJl", 
-              "dGEzLlF1ZXJ5Ii0KF0JlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0EhIKCnByb2pl", 
-              "Y3RfaWQYCCABKAkiLwoYQmVnaW5UcmFuc2FjdGlvblJlc3BvbnNlEhMKC3Ry", 
-              "YW5zYWN0aW9uGAEgASgMIjoKD1JvbGxiYWNrUmVxdWVzdBISCgpwcm9qZWN0", 
-              "X2lkGAggASgJEhMKC3RyYW5zYWN0aW9uGAEgASgMIhIKEFJvbGxiYWNrUmVz", 
-              "cG9uc2Ui8wEKDUNvbW1pdFJlcXVlc3QSEgoKcHJvamVjdF9pZBgIIAEoCRI6", 
-              "CgRtb2RlGAUgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkNvbW1p", 
-              "dFJlcXVlc3QuTW9kZRITCgt0cmFuc2FjdGlvbhgBIAEoDBI1CgltdXRhdGlv", 
-              "bnMYBiADKAsyIi5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuTXV0YXRpb24i", 
-              "RgoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAASEQoNVFJBTlNBQ1RJT05B", 
-              "TBABEhUKEU5PTl9UUkFOU0FDVElPTkFMEAIiawoOQ29tbWl0UmVzcG9uc2US", 
-              "QgoQbXV0YXRpb25fcmVzdWx0cxgDIAMoCzIoLmdvb2dsZS5kYXRhc3RvcmUu", 
-              "djFiZXRhMy5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRhdGVzGAQgASgF", 
-              "IlUKEkFsbG9jYXRlSWRzUmVxdWVzdBISCgpwcm9qZWN0X2lkGAggASgJEisK", 
-              "BGtleXMYASADKAsyHS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuS2V5IkIK", 
-              "E0FsbG9jYXRlSWRzUmVzcG9uc2USKwoEa2V5cxgBIAMoCzIdLmdvb2dsZS5k", 
-              "YXRhc3RvcmUudjFiZXRhMy5LZXki5AEKCE11dGF0aW9uEjIKBmluc2VydBgE", 
-              "IAEoCzIgLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5FbnRpdHlIABIyCgZ1", 
-              "cGRhdGUYBSABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5", 
-              "SAASMgoGdXBzZXJ0GAYgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz", 
-              "LkVudGl0eUgAEi8KBmRlbGV0ZRgHIAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUu", 
-              "djFiZXRhMy5LZXlIAEILCglvcGVyYXRpb24iPAoOTXV0YXRpb25SZXN1bHQS", 
-              "KgoDa2V5GAMgASgLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLktleSLa", 
-              "AQoLUmVhZE9wdGlvbnMSUQoQcmVhZF9jb25zaXN0ZW5jeRgBIAEoDjI1Lmdv", 
-              "b2dsZS5kYXRhc3RvcmUudjFiZXRhMy5SZWFkT3B0aW9ucy5SZWFkQ29uc2lz", 
-              "dGVuY3lIABIVCgt0cmFuc2FjdGlvbhgCIAEoDEgAIk0KD1JlYWRDb25zaXN0", 
-              "ZW5jeRIgChxSRUFEX0NPTlNJU1RFTkNZX1VOU1BFQ0lGSUVEEAASCgoGU1RS", 
-              "T05HEAESDAoIRVZFTlRVQUwQAkISChBjb25zaXN0ZW5jeV90eXBlMrcHCglE", 
-              "YXRhc3RvcmUSjQEKBkxvb2t1cBInLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRh", 
-              "My5Mb29rdXBSZXF1ZXN0GiguZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkxv", 
-              "b2t1cFJlc3BvbnNlIjCC0+STAioiJS92MWJldGEzL3Byb2plY3RzL3twcm9q", 
-              "ZWN0X2lkfTpsb29rdXA6ASoSlQEKCFJ1blF1ZXJ5EikuZ29vZ2xlLmRhdGFz", 
-              "dG9yZS52MWJldGEzLlJ1blF1ZXJ5UmVxdWVzdBoqLmdvb2dsZS5kYXRhc3Rv", 
-              "cmUudjFiZXRhMy5SdW5RdWVyeVJlc3BvbnNlIjKC0+STAiwiJy92MWJldGEz", 
-              "L3Byb2plY3RzL3twcm9qZWN0X2lkfTpydW5RdWVyeToBKhK1AQoQQmVnaW5U", 
-              "cmFuc2FjdGlvbhIxLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5CZWdpblRy", 
-              "YW5zYWN0aW9uUmVxdWVzdBoyLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5C", 
-              "ZWdpblRyYW5zYWN0aW9uUmVzcG9uc2UiOoLT5JMCNCIvL3YxYmV0YTMvcHJv", 
-              "amVjdHMve3Byb2plY3RfaWR9OmJlZ2luVHJhbnNhY3Rpb246ASoSjQEKBkNv", 
-              "bW1pdBInLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Db21taXRSZXF1ZXN0", 
-              "GiguZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkNvbW1pdFJlc3BvbnNlIjCC", 
-              "0+STAioiJS92MWJldGEzL3Byb2plY3RzL3twcm9qZWN0X2lkfTpjb21taXQ6", 
-              "ASoSlQEKCFJvbGxiYWNrEikuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlJv", 
-              "bGxiYWNrUmVxdWVzdBoqLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Sb2xs", 
-              "YmFja1Jlc3BvbnNlIjKC0+STAiwiJy92MWJldGEzL3Byb2plY3RzL3twcm9q", 
-              "ZWN0X2lkfTpyb2xsYmFjazoBKhKhAQoLQWxsb2NhdGVJZHMSLC5nb29nbGUu", 
-              "ZGF0YXN0b3JlLnYxYmV0YTMuQWxsb2NhdGVJZHNSZXF1ZXN0Gi0uZ29vZ2xl", 
-              "LmRhdGFzdG9yZS52MWJldGEzLkFsbG9jYXRlSWRzUmVzcG9uc2UiNYLT5JMC", 
-              "LyIqL3YxYmV0YTMvcHJvamVjdHMve3Byb2plY3RfaWR9OmFsbG9jYXRlSWRz", 
-              "OgEqQjAKHGNvbS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTNCDkRhdGFzdG9y", 
-              "ZVByb3RvUAFiBnByb3RvMw=="));
-        descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-            new pbr::FileDescriptor[] { global::Google.Api.Annotations.Descriptor, global::Google.Datastore.V1Beta3.Proto.Entity.Descriptor, global::Google.Datastore.V1Beta3.Proto.Query.Descriptor, },
-            new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.LookupRequest), new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.LookupResponse), new[]{ "Found", "Missing", "Deferred" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryRequest), new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryResponse), new[]{ "Batch", "Query" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionRequest), new[]{ "ProjectId" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionResponse), new[]{ "Transaction" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackRequest), new[]{ "ProjectId", "Transaction" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackResponse), null, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CommitRequest), new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode) }, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CommitResponse), new[]{ "MutationResults", "IndexUpdates" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsRequest), new[]{ "ProjectId", "Keys" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsResponse), new[]{ "Keys" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Mutation), new[]{ "Insert", "Update", "Upsert", "Delete" }, new[]{ "Operation" }, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.MutationResult), new[]{ "Key" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.ReadOptions), new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) }, null)
-            }));
-      }
-      #endregion
-
+    #region Descriptor
+    /// <summary>File descriptor for google/datastore/v1beta3/datastore.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
     }
+    private static pbr::FileDescriptor descriptor;
+
+    static DatastoreReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "Cihnb29nbGUvZGF0YXN0b3JlL3YxYmV0YTMvZGF0YXN0b3JlLnByb3RvEhhn",
+            "b29nbGUuZGF0YXN0b3JlLnYxYmV0YTMaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8aJWdvb2dsZS9kYXRhc3RvcmUvdjFiZXRhMy9lbnRpdHkucHJv",
+            "dG8aJGdvb2dsZS9kYXRhc3RvcmUvdjFiZXRhMy9xdWVyeS5wcm90byKNAQoN",
+            "TG9va3VwUmVxdWVzdBISCgpwcm9qZWN0X2lkGAggASgJEjsKDHJlYWRfb3B0",
+            "aW9ucxgBIAEoCzIlLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5SZWFkT3B0",
+            "aW9ucxIrCgRrZXlzGAMgAygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz",
+            "LktleSKxAQoOTG9va3VwUmVzcG9uc2USNQoFZm91bmQYASADKAsyJi5nb29n",
+            "bGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5UmVzdWx0EjcKB21pc3NpbmcY",
+            "AiADKAsyJi5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5UmVzdWx0",
+            "Ei8KCGRlZmVycmVkGAMgAygLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz",
+            "LktleSKYAgoPUnVuUXVlcnlSZXF1ZXN0EhIKCnByb2plY3RfaWQYCCABKAkS",
+            "OwoMcGFydGl0aW9uX2lkGAIgASgLMiUuZ29vZ2xlLmRhdGFzdG9yZS52MWJl",
+            "dGEzLlBhcnRpdGlvbklkEjsKDHJlYWRfb3B0aW9ucxgBIAEoCzIlLmdvb2ds",
+            "ZS5kYXRhc3RvcmUudjFiZXRhMy5SZWFkT3B0aW9ucxIwCgVxdWVyeRgDIAEo",
+            "CzIfLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5RdWVyeUgAEjcKCWdxbF9x",
+            "dWVyeRgHIAEoCzIiLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5HcWxRdWVy",
+            "eUgAQgwKCnF1ZXJ5X3R5cGUifQoQUnVuUXVlcnlSZXNwb25zZRI5CgViYXRj",
+            "aBgBIAEoCzIqLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5RdWVyeVJlc3Vs",
+            "dEJhdGNoEi4KBXF1ZXJ5GAIgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MWJl",
+            "dGEzLlF1ZXJ5Ii0KF0JlZ2luVHJhbnNhY3Rpb25SZXF1ZXN0EhIKCnByb2pl",
+            "Y3RfaWQYCCABKAkiLwoYQmVnaW5UcmFuc2FjdGlvblJlc3BvbnNlEhMKC3Ry",
+            "YW5zYWN0aW9uGAEgASgMIjoKD1JvbGxiYWNrUmVxdWVzdBISCgpwcm9qZWN0",
+            "X2lkGAggASgJEhMKC3RyYW5zYWN0aW9uGAEgASgMIhIKEFJvbGxiYWNrUmVz",
+            "cG9uc2Ui8wEKDUNvbW1pdFJlcXVlc3QSEgoKcHJvamVjdF9pZBgIIAEoCRI6",
+            "CgRtb2RlGAUgASgOMiwuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkNvbW1p",
+            "dFJlcXVlc3QuTW9kZRITCgt0cmFuc2FjdGlvbhgBIAEoDBI1CgltdXRhdGlv",
+            "bnMYBiADKAsyIi5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuTXV0YXRpb24i",
+            "RgoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAASEQoNVFJBTlNBQ1RJT05B",
+            "TBABEhUKEU5PTl9UUkFOU0FDVElPTkFMEAIiawoOQ29tbWl0UmVzcG9uc2US",
+            "QgoQbXV0YXRpb25fcmVzdWx0cxgDIAMoCzIoLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djFiZXRhMy5NdXRhdGlvblJlc3VsdBIVCg1pbmRleF91cGRhdGVzGAQgASgF",
+            "IlUKEkFsbG9jYXRlSWRzUmVxdWVzdBISCgpwcm9qZWN0X2lkGAggASgJEisK",
+            "BGtleXMYASADKAsyHS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuS2V5IkIK",
+            "E0FsbG9jYXRlSWRzUmVzcG9uc2USKwoEa2V5cxgBIAMoCzIdLmdvb2dsZS5k",
+            "YXRhc3RvcmUudjFiZXRhMy5LZXki5AEKCE11dGF0aW9uEjIKBmluc2VydBgE",
+            "IAEoCzIgLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5FbnRpdHlIABIyCgZ1",
+            "cGRhdGUYBSABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRW50aXR5",
+            "SAASMgoGdXBzZXJ0GAYgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEz",
+            "LkVudGl0eUgAEi8KBmRlbGV0ZRgHIAEoCzIdLmdvb2dsZS5kYXRhc3RvcmUu",
+            "djFiZXRhMy5LZXlIAEILCglvcGVyYXRpb24iPAoOTXV0YXRpb25SZXN1bHQS",
+            "KgoDa2V5GAMgASgLMh0uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLktleSLa",
+            "AQoLUmVhZE9wdGlvbnMSUQoQcmVhZF9jb25zaXN0ZW5jeRgBIAEoDjI1Lmdv",
+            "b2dsZS5kYXRhc3RvcmUudjFiZXRhMy5SZWFkT3B0aW9ucy5SZWFkQ29uc2lz",
+            "dGVuY3lIABIVCgt0cmFuc2FjdGlvbhgCIAEoDEgAIk0KD1JlYWRDb25zaXN0",
+            "ZW5jeRIgChxSRUFEX0NPTlNJU1RFTkNZX1VOU1BFQ0lGSUVEEAASCgoGU1RS",
+            "T05HEAESDAoIRVZFTlRVQUwQAkISChBjb25zaXN0ZW5jeV90eXBlMrcHCglE",
+            "YXRhc3RvcmUSjQEKBkxvb2t1cBInLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRh",
+            "My5Mb29rdXBSZXF1ZXN0GiguZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkxv",
+            "b2t1cFJlc3BvbnNlIjCC0+STAioiJS92MWJldGEzL3Byb2plY3RzL3twcm9q",
+            "ZWN0X2lkfTpsb29rdXA6ASoSlQEKCFJ1blF1ZXJ5EikuZ29vZ2xlLmRhdGFz",
+            "dG9yZS52MWJldGEzLlJ1blF1ZXJ5UmVxdWVzdBoqLmdvb2dsZS5kYXRhc3Rv",
+            "cmUudjFiZXRhMy5SdW5RdWVyeVJlc3BvbnNlIjKC0+STAiwiJy92MWJldGEz",
+            "L3Byb2plY3RzL3twcm9qZWN0X2lkfTpydW5RdWVyeToBKhK1AQoQQmVnaW5U",
+            "cmFuc2FjdGlvbhIxLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5CZWdpblRy",
+            "YW5zYWN0aW9uUmVxdWVzdBoyLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5C",
+            "ZWdpblRyYW5zYWN0aW9uUmVzcG9uc2UiOoLT5JMCNCIvL3YxYmV0YTMvcHJv",
+            "amVjdHMve3Byb2plY3RfaWR9OmJlZ2luVHJhbnNhY3Rpb246ASoSjQEKBkNv",
+            "bW1pdBInLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Db21taXRSZXF1ZXN0",
+            "GiguZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkNvbW1pdFJlc3BvbnNlIjCC",
+            "0+STAioiJS92MWJldGEzL3Byb2plY3RzL3twcm9qZWN0X2lkfTpjb21taXQ6",
+            "ASoSlQEKCFJvbGxiYWNrEikuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlJv",
+            "bGxiYWNrUmVxdWVzdBoqLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Sb2xs",
+            "YmFja1Jlc3BvbnNlIjKC0+STAiwiJy92MWJldGEzL3Byb2plY3RzL3twcm9q",
+            "ZWN0X2lkfTpyb2xsYmFjazoBKhKhAQoLQWxsb2NhdGVJZHMSLC5nb29nbGUu",
+            "ZGF0YXN0b3JlLnYxYmV0YTMuQWxsb2NhdGVJZHNSZXF1ZXN0Gi0uZ29vZ2xl",
+            "LmRhdGFzdG9yZS52MWJldGEzLkFsbG9jYXRlSWRzUmVzcG9uc2UiNYLT5JMC",
+            "LyIqL3YxYmV0YTMvcHJvamVjdHMve3Byb2plY3RfaWR9OmFsbG9jYXRlSWRz",
+            "OgEqQjAKHGNvbS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTNCDkRhdGFzdG9y",
+            "ZVByb3RvUAFiBnByb3RvMw=="));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Datastore.V1Beta3.EntityReflection.Descriptor, global::Google.Datastore.V1Beta3.QueryReflection.Descriptor, },
+          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.LookupRequest), global::Google.Datastore.V1Beta3.LookupRequest.Parser, new[]{ "ProjectId", "ReadOptions", "Keys" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.LookupResponse), global::Google.Datastore.V1Beta3.LookupResponse.Parser, new[]{ "Found", "Missing", "Deferred" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryRequest), global::Google.Datastore.V1Beta3.RunQueryRequest.Parser, new[]{ "ProjectId", "PartitionId", "ReadOptions", "Query", "GqlQuery" }, new[]{ "QueryType" }, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RunQueryResponse), global::Google.Datastore.V1Beta3.RunQueryResponse.Parser, new[]{ "Batch", "Query" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionRequest), global::Google.Datastore.V1Beta3.BeginTransactionRequest.Parser, new[]{ "ProjectId" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.BeginTransactionResponse), global::Google.Datastore.V1Beta3.BeginTransactionResponse.Parser, new[]{ "Transaction" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackRequest), global::Google.Datastore.V1Beta3.RollbackRequest.Parser, new[]{ "ProjectId", "Transaction" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.RollbackResponse), global::Google.Datastore.V1Beta3.RollbackResponse.Parser, null, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CommitRequest), global::Google.Datastore.V1Beta3.CommitRequest.Parser, new[]{ "ProjectId", "Mode", "Transaction", "Mutations" }, null, new[]{ typeof(global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode) }, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.CommitResponse), global::Google.Datastore.V1Beta3.CommitResponse.Parser, new[]{ "MutationResults", "IndexUpdates" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsRequest), global::Google.Datastore.V1Beta3.AllocateIdsRequest.Parser, new[]{ "ProjectId", "Keys" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.AllocateIdsResponse), global::Google.Datastore.V1Beta3.AllocateIdsResponse.Parser, new[]{ "Keys" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.Mutation), global::Google.Datastore.V1Beta3.Mutation.Parser, new[]{ "Insert", "Update", "Upsert", "Delete" }, new[]{ "Operation" }, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.MutationResult), global::Google.Datastore.V1Beta3.MutationResult.Parser, new[]{ "Key" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Google.Datastore.V1Beta3.ReadOptions), global::Google.Datastore.V1Beta3.ReadOptions.Parser, new[]{ "ReadConsistency", "Transaction" }, new[]{ "ConsistencyType" }, new[]{ typeof(global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) }, null)
+          }));
+    }
+    #endregion
+
   }
   #region Messages
+  /// <summary>
+  ///  The request for [google.datastore.v1beta3.Datastore.Lookup][google.datastore.v1beta3.Datastore.Lookup].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LookupRequest : pb::IMessage<LookupRequest> {
     private static readonly pb::MessageParser<LookupRequest> _parser = new pb::MessageParser<LookupRequest>(() => new LookupRequest());
     public static pb::MessageParser<LookupRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -147,8 +149,13 @@ namespace Google.Datastore.V1Beta3 {
       return new LookupRequest(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID against which to make the request. Not required if the request
+    ///  is made over HTTP.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -156,8 +163,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "read_options" field.</summary>
     public const int ReadOptionsFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.ReadOptions readOptions_;
+    /// <summary>
+    ///  Options for this lookup request.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.ReadOptions ReadOptions {
       get { return readOptions_; }
       set {
@@ -165,10 +176,14 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "keys" field.</summary>
     public const int KeysFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Key> _repeated_keys_codec
         = pb::FieldCodec.ForMessage(26, global::Google.Datastore.V1Beta3.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> keys_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key>();
+    /// <summary>
+    ///  Keys of entities to look up.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> Keys {
       get { return keys_; }
     }
@@ -199,7 +214,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -270,13 +285,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The response for [google.datastore.v1beta3.Datastore.Lookup][google.datastore.v1beta3.Datastore.Lookup].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class LookupResponse : pb::IMessage<LookupResponse> {
     private static readonly pb::MessageParser<LookupResponse> _parser = new pb::MessageParser<LookupResponse>(() => new LookupResponse());
     public static pb::MessageParser<LookupResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[1]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -299,26 +317,44 @@ namespace Google.Datastore.V1Beta3 {
       return new LookupResponse(this);
     }
 
+    /// <summary>Field number for the "found" field.</summary>
     public const int FoundFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.EntityResult> _repeated_found_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Datastore.V1Beta3.EntityResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult> found_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult>();
+    /// <summary>
+    ///  Entities found as `ResultType.FULL` entities. The order of results in this
+    ///  field is undefined and has no relation to the order of the keys in the
+    ///  input.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult> Found {
       get { return found_; }
     }
 
+    /// <summary>Field number for the "missing" field.</summary>
     public const int MissingFieldNumber = 2;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.EntityResult> _repeated_missing_codec
         = pb::FieldCodec.ForMessage(18, global::Google.Datastore.V1Beta3.EntityResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult> missing_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult>();
+    /// <summary>
+    ///  Entities not found as `ResultType.KEY_ONLY` entities. The order of results
+    ///  in this field is undefined and has no relation to the order of the keys
+    ///  in the input.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.EntityResult> Missing {
       get { return missing_; }
     }
 
+    /// <summary>Field number for the "deferred" field.</summary>
     public const int DeferredFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Key> _repeated_deferred_codec
         = pb::FieldCodec.ForMessage(26, global::Google.Datastore.V1Beta3.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> deferred_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key>();
+    /// <summary>
+    ///  A list of keys that were not looked up due to resource constraints. The
+    ///  order of results in this field is undefined and has no relation to the
+    ///  order of the keys in the input.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> Deferred {
       get { return deferred_; }
     }
@@ -349,7 +385,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -400,13 +436,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The request for [google.datastore.v1beta3.Datastore.RunQuery][google.datastore.v1beta3.Datastore.RunQuery].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RunQueryRequest : pb::IMessage<RunQueryRequest> {
     private static readonly pb::MessageParser<RunQueryRequest> _parser = new pb::MessageParser<RunQueryRequest>(() => new RunQueryRequest());
     public static pb::MessageParser<RunQueryRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[2]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -438,8 +477,13 @@ namespace Google.Datastore.V1Beta3 {
       return new RunQueryRequest(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID against which to make the request. Not required if the request
+    ///  is made over HTTP.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -447,8 +491,16 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "partition_id" field.</summary>
     public const int PartitionIdFieldNumber = 2;
     private global::Google.Datastore.V1Beta3.PartitionId partitionId_;
+    /// <summary>
+    ///  Entities are partitioned into subsets, identified by a partition ID.
+    ///  Queries are scoped to a single partition.
+    ///  This partition ID is normalized with the standard default context
+    ///  partition ID, but all other partition IDs in `RunQueryRequest` are
+    ///  normalized with this partition ID as the context partition ID.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.PartitionId PartitionId {
       get { return partitionId_; }
       set {
@@ -456,8 +508,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "read_options" field.</summary>
     public const int ReadOptionsFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.ReadOptions readOptions_;
+    /// <summary>
+    ///  The options for this query.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.ReadOptions ReadOptions {
       get { return readOptions_; }
       set {
@@ -465,7 +521,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "query" field.</summary>
     public const int QueryFieldNumber = 3;
+    /// <summary>
+    ///  The query to run.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Query Query {
       get { return queryTypeCase_ == QueryTypeOneofCase.Query ? (global::Google.Datastore.V1Beta3.Query) queryType_ : null; }
       set {
@@ -474,7 +534,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "gql_query" field.</summary>
     public const int GqlQueryFieldNumber = 7;
+    /// <summary>
+    ///  The GQL query to run.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.GqlQuery GqlQuery {
       get { return queryTypeCase_ == QueryTypeOneofCase.GqlQuery ? (global::Google.Datastore.V1Beta3.GqlQuery) queryType_ : null; }
       set {
@@ -484,6 +548,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     private object queryType_;
+    /// <summary>Enum of possible cases for the "query_type" oneof.</summary>
     public enum QueryTypeOneofCase {
       None = 0,
       Query = 3,
@@ -515,6 +580,7 @@ namespace Google.Datastore.V1Beta3 {
       if (!object.Equals(ReadOptions, other.ReadOptions)) return false;
       if (!object.Equals(Query, other.Query)) return false;
       if (!object.Equals(GqlQuery, other.GqlQuery)) return false;
+      if (QueryTypeCase != other.QueryTypeCase) return false;
       return true;
     }
 
@@ -525,11 +591,12 @@ namespace Google.Datastore.V1Beta3 {
       if (readOptions_ != null) hash ^= ReadOptions.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.Query) hash ^= Query.GetHashCode();
       if (queryTypeCase_ == QueryTypeOneofCase.GqlQuery) hash ^= GqlQuery.GetHashCode();
+      hash ^= (int) queryTypeCase_;
       return hash;
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -654,13 +721,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The response for [google.datastore.v1beta3.Datastore.RunQuery][google.datastore.v1beta3.Datastore.RunQuery].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse> {
     private static readonly pb::MessageParser<RunQueryResponse> _parser = new pb::MessageParser<RunQueryResponse>(() => new RunQueryResponse());
     public static pb::MessageParser<RunQueryResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[3]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -682,8 +752,12 @@ namespace Google.Datastore.V1Beta3 {
       return new RunQueryResponse(this);
     }
 
+    /// <summary>Field number for the "batch" field.</summary>
     public const int BatchFieldNumber = 1;
     private global::Google.Datastore.V1Beta3.QueryResultBatch batch_;
+    /// <summary>
+    ///  A batch of query results (always present).
+    /// </summary>
     public global::Google.Datastore.V1Beta3.QueryResultBatch Batch {
       get { return batch_; }
       set {
@@ -691,8 +765,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "query" field.</summary>
     public const int QueryFieldNumber = 2;
     private global::Google.Datastore.V1Beta3.Query query_;
+    /// <summary>
+    ///  The parsed form of the `GqlQuery` from the request, if it was set.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Query Query {
       get { return query_; }
       set {
@@ -724,7 +802,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -794,13 +872,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The request for [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
     public static pb::MessageParser<BeginTransactionRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[4]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -821,8 +902,13 @@ namespace Google.Datastore.V1Beta3 {
       return new BeginTransactionRequest(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID against which to make the request. Not required if the request
+    ///  is made over HTTP.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -852,7 +938,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -896,13 +982,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The response for [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse> {
     private static readonly pb::MessageParser<BeginTransactionResponse> _parser = new pb::MessageParser<BeginTransactionResponse>(() => new BeginTransactionResponse());
     public static pb::MessageParser<BeginTransactionResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[5]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -923,8 +1012,12 @@ namespace Google.Datastore.V1Beta3 {
       return new BeginTransactionResponse(this);
     }
 
+    /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
     private pb::ByteString transaction_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  The transaction identifier (always present).
+    /// </summary>
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
@@ -954,7 +1047,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -998,13 +1091,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The request for [google.datastore.v1beta3.Datastore.Rollback][google.datastore.v1beta3.Datastore.Rollback].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RollbackRequest : pb::IMessage<RollbackRequest> {
     private static readonly pb::MessageParser<RollbackRequest> _parser = new pb::MessageParser<RollbackRequest>(() => new RollbackRequest());
     public static pb::MessageParser<RollbackRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[6]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1026,8 +1122,13 @@ namespace Google.Datastore.V1Beta3 {
       return new RollbackRequest(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID against which to make the request. Not required if the request
+    ///  is made over HTTP.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1035,8 +1136,13 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
     private pb::ByteString transaction_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  The transaction identifier, returned by a call to
+    ///  [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+    /// </summary>
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
@@ -1068,7 +1174,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1126,13 +1232,17 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The response for [google.datastore.v1beta3.Datastore.Rollback][google.datastore.v1beta3.Datastore.Rollback]
+  ///  (an empty message).
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class RollbackResponse : pb::IMessage<RollbackResponse> {
     private static readonly pb::MessageParser<RollbackResponse> _parser = new pb::MessageParser<RollbackResponse>(() => new RollbackResponse());
     public static pb::MessageParser<RollbackResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[7]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1172,7 +1282,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1202,13 +1312,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The request for [google.datastore.v1beta3.Datastore.Commit][google.datastore.v1beta3.Datastore.Commit].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class CommitRequest : pb::IMessage<CommitRequest> {
     private static readonly pb::MessageParser<CommitRequest> _parser = new pb::MessageParser<CommitRequest>(() => new CommitRequest());
     public static pb::MessageParser<CommitRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[8]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1232,8 +1345,13 @@ namespace Google.Datastore.V1Beta3 {
       return new CommitRequest(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID against which to make the request. Not required if the request
+    ///  is made over HTTP.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1241,8 +1359,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "mode" field.</summary>
     public const int ModeFieldNumber = 5;
     private global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode mode_ = global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode.MODE_UNSPECIFIED;
+    /// <summary>
+    ///  The type of commit to perform. Defaults to `TRANSACTIONAL`.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.CommitRequest.Types.Mode Mode {
       get { return mode_; }
       set {
@@ -1250,8 +1372,14 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
     private pb::ByteString transaction_ = pb::ByteString.Empty;
+    /// <summary>
+    ///  The transaction identifier, returned by a call to
+    ///  [google.datastore.v1beta3.Datastore.BeginTransaction][google.datastore.v1beta3.Datastore.BeginTransaction].
+    ///  Must be set when mode is `TRANSACTIONAL`.
+    /// </summary>
     public pb::ByteString Transaction {
       get { return transaction_; }
       set {
@@ -1259,10 +1387,14 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "mutations" field.</summary>
     public const int MutationsFieldNumber = 6;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Mutation> _repeated_mutations_codec
         = pb::FieldCodec.ForMessage(50, global::Google.Datastore.V1Beta3.Mutation.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Mutation> mutations_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Mutation>();
+    /// <summary>
+    ///  The mutations to perform.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Mutation> Mutations {
       get { return mutations_; }
     }
@@ -1295,7 +1427,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1373,11 +1505,24 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the CommitRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  Commit modes.
+      /// </summary>
       public enum Mode {
+        /// <summary>
+        ///  Unspecified.
+        /// </summary>
         MODE_UNSPECIFIED = 0,
+        /// <summary>
+        ///  Transactional.
+        /// </summary>
         TRANSACTIONAL = 1,
+        /// <summary>
+        ///  Non-transactional.
+        /// </summary>
         NON_TRANSACTIONAL = 2,
       }
 
@@ -1386,13 +1531,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The response for [google.datastore.v1beta3.Datastore.Commit][google.datastore.v1beta3.Datastore.Commit].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class CommitResponse : pb::IMessage<CommitResponse> {
     private static readonly pb::MessageParser<CommitResponse> _parser = new pb::MessageParser<CommitResponse>(() => new CommitResponse());
     public static pb::MessageParser<CommitResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[9]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1414,16 +1562,25 @@ namespace Google.Datastore.V1Beta3 {
       return new CommitResponse(this);
     }
 
+    /// <summary>Field number for the "mutation_results" field.</summary>
     public const int MutationResultsFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.MutationResult> _repeated_mutationResults_codec
         = pb::FieldCodec.ForMessage(26, global::Google.Datastore.V1Beta3.MutationResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.MutationResult> mutationResults_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.MutationResult>();
+    /// <summary>
+    ///  The result of performing the mutations.
+    ///  The i-th mutation result corresponds to the i-th mutation in the request.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.MutationResult> MutationResults {
       get { return mutationResults_; }
     }
 
+    /// <summary>Field number for the "index_updates" field.</summary>
     public const int IndexUpdatesFieldNumber = 4;
     private int indexUpdates_;
+    /// <summary>
+    ///  The number of index entries updated during the commit.
+    /// </summary>
     public int IndexUpdates {
       get { return indexUpdates_; }
       set {
@@ -1455,7 +1612,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1506,13 +1663,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The request for [google.datastore.v1beta3.Datastore.AllocateIds][google.datastore.v1beta3.Datastore.AllocateIds].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AllocateIdsRequest : pb::IMessage<AllocateIdsRequest> {
     private static readonly pb::MessageParser<AllocateIdsRequest> _parser = new pb::MessageParser<AllocateIdsRequest>(() => new AllocateIdsRequest());
     public static pb::MessageParser<AllocateIdsRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[10]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1534,8 +1694,13 @@ namespace Google.Datastore.V1Beta3 {
       return new AllocateIdsRequest(this);
     }
 
+    /// <summary>Field number for the "project_id" field.</summary>
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
+    /// <summary>
+    ///  Project ID against which to make the request. Not required if the request
+    ///  is made over HTTP.
+    /// </summary>
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1543,10 +1708,15 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "keys" field.</summary>
     public const int KeysFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Key> _repeated_keys_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Datastore.V1Beta3.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> keys_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key>();
+    /// <summary>
+    ///  A list of keys with incomplete key paths for which to allocate IDs.
+    ///  No key may be reserved/read-only.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> Keys {
       get { return keys_; }
     }
@@ -1575,7 +1745,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1626,13 +1796,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The response for [google.datastore.v1beta3.Datastore.AllocateIds][google.datastore.v1beta3.Datastore.AllocateIds].
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class AllocateIdsResponse : pb::IMessage<AllocateIdsResponse> {
     private static readonly pb::MessageParser<AllocateIdsResponse> _parser = new pb::MessageParser<AllocateIdsResponse>(() => new AllocateIdsResponse());
     public static pb::MessageParser<AllocateIdsResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[11]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1653,10 +1826,15 @@ namespace Google.Datastore.V1Beta3 {
       return new AllocateIdsResponse(this);
     }
 
+    /// <summary>Field number for the "keys" field.</summary>
     public const int KeysFieldNumber = 1;
     private static readonly pb::FieldCodec<global::Google.Datastore.V1Beta3.Key> _repeated_keys_codec
         = pb::FieldCodec.ForMessage(10, global::Google.Datastore.V1Beta3.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> keys_ = new pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key>();
+    /// <summary>
+    ///  The keys specified in the request (in the same order), each with
+    ///  its key path completed with a newly allocated ID.
+    /// </summary>
     public pbc::RepeatedField<global::Google.Datastore.V1Beta3.Key> Keys {
       get { return keys_; }
     }
@@ -1683,7 +1861,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1720,13 +1898,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  A mutation to apply to an entity.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class Mutation : pb::IMessage<Mutation> {
     private static readonly pb::MessageParser<Mutation> _parser = new pb::MessageParser<Mutation>(() => new Mutation());
     public static pb::MessageParser<Mutation> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[12]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1761,7 +1942,12 @@ namespace Google.Datastore.V1Beta3 {
       return new Mutation(this);
     }
 
+    /// <summary>Field number for the "insert" field.</summary>
     public const int InsertFieldNumber = 4;
+    /// <summary>
+    ///  The entity to insert. The entity must not already exist.
+    ///  The entity's key's final path element may be incomplete.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Entity Insert {
       get { return operationCase_ == OperationOneofCase.Insert ? (global::Google.Datastore.V1Beta3.Entity) operation_ : null; }
       set {
@@ -1770,7 +1956,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "update" field.</summary>
     public const int UpdateFieldNumber = 5;
+    /// <summary>
+    ///  The entity to update. The entity must already exist.
+    ///  Must have a complete key path.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Entity Update {
       get { return operationCase_ == OperationOneofCase.Update ? (global::Google.Datastore.V1Beta3.Entity) operation_ : null; }
       set {
@@ -1779,7 +1970,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "upsert" field.</summary>
     public const int UpsertFieldNumber = 6;
+    /// <summary>
+    ///  The entity to upsert. The entity may or may not already exist.
+    ///  The entity's key's final path element may be incomplete.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Entity Upsert {
       get { return operationCase_ == OperationOneofCase.Upsert ? (global::Google.Datastore.V1Beta3.Entity) operation_ : null; }
       set {
@@ -1788,7 +1984,12 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "delete" field.</summary>
     public const int DeleteFieldNumber = 7;
+    /// <summary>
+    ///  The key of the entity to delete. The entity may or may not already exist.
+    ///  Must have a complete key path and must not be reserved/read-only.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Key Delete {
       get { return operationCase_ == OperationOneofCase.Delete ? (global::Google.Datastore.V1Beta3.Key) operation_ : null; }
       set {
@@ -1798,6 +1999,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     private object operation_;
+    /// <summary>Enum of possible cases for the "operation" oneof.</summary>
     public enum OperationOneofCase {
       None = 0,
       Insert = 4,
@@ -1830,6 +2032,7 @@ namespace Google.Datastore.V1Beta3 {
       if (!object.Equals(Update, other.Update)) return false;
       if (!object.Equals(Upsert, other.Upsert)) return false;
       if (!object.Equals(Delete, other.Delete)) return false;
+      if (OperationCase != other.OperationCase) return false;
       return true;
     }
 
@@ -1839,11 +2042,12 @@ namespace Google.Datastore.V1Beta3 {
       if (operationCase_ == OperationOneofCase.Update) hash ^= Update.GetHashCode();
       if (operationCase_ == OperationOneofCase.Upsert) hash ^= Upsert.GetHashCode();
       if (operationCase_ == OperationOneofCase.Delete) hash ^= Delete.GetHashCode();
+      hash ^= (int) operationCase_;
       return hash;
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -1952,13 +2156,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  The result of applying a mutation.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class MutationResult : pb::IMessage<MutationResult> {
     private static readonly pb::MessageParser<MutationResult> _parser = new pb::MessageParser<MutationResult>(() => new MutationResult());
     public static pb::MessageParser<MutationResult> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[13]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -1979,8 +2186,13 @@ namespace Google.Datastore.V1Beta3 {
       return new MutationResult(this);
     }
 
+    /// <summary>Field number for the "key" field.</summary>
     public const int KeyFieldNumber = 3;
     private global::Google.Datastore.V1Beta3.Key key_;
+    /// <summary>
+    ///  The automatically allocated key.
+    ///  Set only when the mutation allocated a key.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.Key Key {
       get { return key_; }
       set {
@@ -2010,7 +2222,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2060,13 +2272,16 @@ namespace Google.Datastore.V1Beta3 {
 
   }
 
+  /// <summary>
+  ///  Options shared by read requests.
+  /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
   public sealed partial class ReadOptions : pb::IMessage<ReadOptions> {
     private static readonly pb::MessageParser<ReadOptions> _parser = new pb::MessageParser<ReadOptions>(() => new ReadOptions());
     public static pb::MessageParser<ReadOptions> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.MessageTypes[14]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -2095,7 +2310,12 @@ namespace Google.Datastore.V1Beta3 {
       return new ReadOptions(this);
     }
 
+    /// <summary>Field number for the "read_consistency" field.</summary>
     public const int ReadConsistencyFieldNumber = 1;
+    /// <summary>
+    ///  The non-transactional read consistency to use.
+    ///  Cannot be set to `STRONG` for global queries.
+    /// </summary>
     public global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency ReadConsistency {
       get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency ? (global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency) consistencyType_ : global::Google.Datastore.V1Beta3.ReadOptions.Types.ReadConsistency.READ_CONSISTENCY_UNSPECIFIED; }
       set {
@@ -2104,7 +2324,11 @@ namespace Google.Datastore.V1Beta3 {
       }
     }
 
+    /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 2;
+    /// <summary>
+    ///  The transaction identifier to use.
+    /// </summary>
     public pb::ByteString Transaction {
       get { return consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction ? (pb::ByteString) consistencyType_ : pb::ByteString.Empty; }
       set {
@@ -2114,6 +2338,7 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     private object consistencyType_;
+    /// <summary>Enum of possible cases for the "consistency_type" oneof.</summary>
     public enum ConsistencyTypeOneofCase {
       None = 0,
       ReadConsistency = 1,
@@ -2142,6 +2367,7 @@ namespace Google.Datastore.V1Beta3 {
       }
       if (ReadConsistency != other.ReadConsistency) return false;
       if (Transaction != other.Transaction) return false;
+      if (ConsistencyTypeCase != other.ConsistencyTypeCase) return false;
       return true;
     }
 
@@ -2149,11 +2375,12 @@ namespace Google.Datastore.V1Beta3 {
       int hash = 1;
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.ReadConsistency) hash ^= ReadConsistency.GetHashCode();
       if (consistencyTypeCase_ == ConsistencyTypeOneofCase.Transaction) hash ^= Transaction.GetHashCode();
+      hash ^= (int) consistencyTypeCase_;
       return hash;
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -2214,11 +2441,24 @@ namespace Google.Datastore.V1Beta3 {
     }
 
     #region Nested types
+    /// <summary>Container for nested types declared in the ReadOptions message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public static partial class Types {
+      /// <summary>
+      ///  Read consistencies.
+      /// </summary>
       public enum ReadConsistency {
+        /// <summary>
+        ///  Unspecified.
+        /// </summary>
         READ_CONSISTENCY_UNSPECIFIED = 0,
+        /// <summary>
+        ///  Strong consistency.
+        /// </summary>
         STRONG = 1,
+        /// <summary>
+        ///  Eventual consistency.
+        /// </summary>
         EVENTUAL = 2,
       }
 

@@ -70,7 +70,7 @@ namespace Google.Datastore.V1Beta3 {
     // service descriptor
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Datastore.V1Beta3.Proto.Datastore.Descriptor.Services[0]; }
+      get { return global::Google.Datastore.V1Beta3.DatastoreReflection.Descriptor.Services[0]; }
     }
 
     // client interface
