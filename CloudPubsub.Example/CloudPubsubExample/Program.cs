@@ -29,7 +29,7 @@ namespace CloudPubsubExample
 
             var googleCredential = GoogleCredential.GetApplicationDefaultAsync().GetAwaiter().GetResult();
 
-            Channel channel = new Channel("pubsub-staging.googleapis.com", new SslCredentials(File.ReadAllText(@"C:\Users\jtattermusch\certs\cacerts\roots.pem")));
+            Channel channel = new Channel("pubsub-experimental.googleapis.com", new SslCredentials(File.ReadAllText(@"C:\Users\jtattermusch\certs\cacerts\roots.pem")));
 
             var publisherClient = new Google.Pubsub.V1.Publisher.PublisherClient(channel) {
                 HeaderInterceptor = AuthInterceptors.FromCredential(googleCredential)
